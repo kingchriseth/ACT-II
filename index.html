@@ -4,51 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACT II: The AI Prophecy</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: black;
+        }
+
+        /* Matrix Background Styles */
+        .matrix-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+        }
+
+        /* Cascading Text Effect */
+        @keyframes matrix-fall {
+            0% { transform: translateY(-100%); opacity: 0; }
+            100% { transform: translateY(100%); opacity: 1; }
+        }
+
+        .matrix-column {
+            font-family: monospace;
+            font-size: 20px;
+            color: rgba(255, 105, 180, 0.8); /* pink/purple color */
+            animation: matrix-fall 2s linear infinite;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Randomize delay to create cascading effect */
+        .matrix-column span {
+            display: block;
+            opacity: 0;
+            animation: matrix-fall 3s linear infinite;
+        }
+        .matrix-column span:nth-child(1)  { animation-delay: 0s; }
+        .matrix-column span:nth-child(2)  { animation-delay: 0.2s; }
+        .matrix-column span:nth-child(3)  { animation-delay: 0.4s; }
+        .matrix-column span:nth-child(4)  { animation-delay: 0.6s; }
+        .matrix-column span:nth-child(5)  { animation-delay: 0.8s; }
+        .matrix-column span:nth-child(6)  { animation-delay: 1s; }
+        .matrix-column span:nth-child(7)  { animation-delay: 1.2s; }
+        .matrix-column span:nth-child(8)  { animation-delay: 1.4s; }
+        .matrix-column span:nth-child(9)  { animation-delay: 1.6s; }
+        .matrix-column span:nth-child(10) { animation-delay: 1.8s; }
+
+        /* Main Content Styling */
+        .content {
+            position: relative;
+            text-align: center;
+            padding-top: 10%;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #32CD32; /* green color */
+            margin: 0;
+        }
+
+        .contract-address {
+            margin-top: 10px;
+            color: #FF69B4; /* Pink color */
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-    <header>
+
+    <!-- Matrix Background -->
+    <div class="matrix-background">
+        <!-- Repeated columns of cascading text for matrix effect -->
+        <div class="matrix-column"><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span></div>
+        <div class="matrix-column"><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span></div>
+        <div class="matrix-column"><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span></div>
+        <div class="matrix-column"><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span></div>
+        <div class="matrix-column"><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
         <h1>ACT II: The AI Prophecy</h1>
-        <p>Contract Address: <strong>7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</strong></p>
-    </header>
+        <div class="contract-address">CA: 7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</div>
+        <p>Act I is one of the most important milestones in AI history...</p>
+        <!-- Add your mission and vision content here as you need -->
+    </div>
 
-    <main>
-        <section class="intro">
-            <h2>Act II: A Milestone in AI History</h2>
-            <p>$ACTII stands as a testament to resilience, unity, and growth within the AI and crypto communities. Initiated to create a decentralized, community-driven force in AI, $ACTII has attracted enthusiasts, developers, and innovators to advance AI literacy, accessibility, and engagement with transformative technology.</p>
-        </section>
-
-        <section class="role-of-amplifiedamp">
-            <h2>The Journey of ACT II and AmplifiedAmp</h2>
-            <p>ACT II began with a vision co-founded by AmplifiedAmp (Amp), who originally pledged to cultivate a decentralized community ecosystem for AI. However, as the journey unfolded, Amp's actions revealed a different focus, leading to unexpected challenges for $ACTII. Despite this, the community rallied to stabilize and continue forward, embodying the project’s ideals of unity and collective resilience.</p>
-            <p>When Amp’s involvement concluded, it was a turning point, marking the community’s autonomy and opening doors for true community-led advancement of AI.</p>
-        </section>
-
-        <section class="community-resilience">
-            <h2>The Community’s Resilience and New Purpose</h2>
-            <p>After Amp’s exit, the $ACTII community emerged stronger and more unified, with a renewed purpose to direct the project’s future collaboratively. Amp's departure left the community financially fortified with over $1 million, securing resources to further $ACTII’s mission of advancing AI education and accessibility globally.</p>
-            <p>Members stepped into leadership roles, establishing $ACTII as a true hub for AI learning and exploration, allowing people from all backgrounds to contribute to the AI revolution.</p>
-        </section>
-
-        <section class="mission-vision">
-            <h2>The Mission of $ACTII: Spreading Knowledge and Empowering People</h2>
-            <p>$ACTII is a decentralized AI community with a central goal: to democratize AI knowledge and make it accessible to all. The community focuses on projects that teach AI fundamentals, promote ethical discussions, and support research and development. By breaking down barriers to AI understanding, $ACTII seeks to empower people to engage meaningfully with this revolutionary technology.</p>
-        </section>
-
-        <section class="ecosystem">
-            <h2>Key Aspects of the $ACTII Ecosystem</h2>
-            <ul>
-                <li><strong>Education and Awareness:</strong> $ACTII is committed to fostering understanding of AI's potential and challenges, ensuring knowledge is available to everyone.</li>
-                <li><strong>Decentralized Community:</strong> Since Amp’s exit, $ACTII is fully community-driven, with collaborative decision-making that allows anyone to participate in the crypto-AI ecosystem.</li>
-                <li><strong>AI Project Support:</strong> Through ACT II and its ongoing initiatives, $ACTII supports the development of AI innovations, encouraging growth and learning.</li>
-            </ul>
-        </section>
-
-        <section class="future-narrative">
-            <h2>The Narrative Going Forward</h2>
-            <p>With full community ownership, $ACTII is more than just a token; it represents the power of decentralized collaboration, education, and shared vision. Free from outside control, the community now drives $ACTII’s mission with a collective goal to shape the future of AI and contribute positively to technological progress.</p>
-            <p>$ACTII stands as a unique, community-owned AI-crypto initiative, exemplifying the potential of collaboration in the AI era. As the journey continues, the community is committed to building a lasting legacy that reflects the strength and innovation of decentralized empowerment.</p>
-        </section>
-    </main>
 </body>
 </html>
