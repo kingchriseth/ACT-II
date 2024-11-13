@@ -1,165 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACT II: The Next Chapter of AI Empowerment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACT II - The AI Prophecy</title>
+    <style>
+        /* Base reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
 
-<style>
-    /* Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+        /* Full-screen Matrix Effect Background */
+        body, html {
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            color: #ffffff;
+        }
 
-    /* Body styling */
-    body {
-        font-family: 'Arial', sans-serif;
-        color: #E0E0E0;
-        background: black;
-        overflow: hidden;
-    }
+        /* Matrix animation */
+        .matrix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            background: black;
+        }
 
-    /* Matrix effect */
-    @keyframes fall {
-        0% { transform: translateY(-100vh); opacity: 0; }
-        10% { opacity: 1; }
-        100% { transform: translateY(100vh); opacity: 0; }
-    }
+        .matrix div {
+            position: absolute;
+            top: -100%;
+            width: 20px;
+            color: rgba(255, 0, 255, 0.7);
+            font-size: 20px;
+            line-height: 1.2;
+            animation: fall linear infinite;
+            opacity: 0.8;
+        }
 
-    .matrix {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        font-size: 18px;
-        color: rgba(255, 20, 147, 0.8); /* Bright pink/purple */
-        pointer-events: none;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-    }
+        /* Random speed and start time for matrix columns */
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
 
-    .matrix span {
-        width: 1.5%;
-        line-height: 1.5em;
-        animation: fall linear infinite;
-        font-weight: bold;
-    }
+        /* Main Content Styling */
+        .container {
+            text-align: center;
+            max-width: 90%;
+            z-index: 2;
+        }
 
-    /* Different fall durations for varied effect */
-    .matrix span:nth-child(10n+1) { animation-duration: 3s; }
-    .matrix span:nth-child(10n+2) { animation-duration: 4s; }
-    .matrix span:nth-child(10n+3) { animation-duration: 5s; }
-    .matrix span:nth-child(10n+4) { animation-duration: 6s; }
-    .matrix span:nth-child(10n+5) { animation-duration: 7s; }
+        h1 {
+            font-size: 4rem;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+            animation: pulse 2s infinite;
+        }
 
-    /* Title styling with pulsing effect */
-    @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.85; }
-    }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
 
-    h1 {
-        font-size: 2.8em;
-        text-align: center;
-        margin: 20px 0;
-        color: limegreen;
-        text-shadow: 0 0 10px #0f0;
-        font-weight: bold;
-        animation: pulse 3s ease-in-out infinite;
-    }
+        /* Content Styling */
+        .content {
+            font-size: 1.2rem;
+            color: #ffffff;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
 
-    /* Content styling */
-    .content {
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 20px;
-        color: white;
-        background: rgba(0, 0, 0, 0.8);
-        border-radius: 8px;
-        box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.3);
-    }
+        .header {
+            color: #87CEEB;
+        }
 
-    /* Header styling */
-    h2 {
-        color: #00BFFF;
-        margin-bottom: 15px;
-        font-size: 1.2em;
-    }
+        .highlight {
+            color: #ff0000;
+        }
 
-    /* Highlight colors */
-    .highlight-blue { color: #00BFFF; }
-    .highlight-red { color: red; }
-    .highlight-green { color: #00FF00; }
+        .contract {
+            font-size: 1.2rem;
+            margin: 2rem 0;
+            color: #00ff00;
+            font-weight: bold;
+        }
 
-    /* Uniform text size */
-    p, ul, li {
-        font-size: 1em;
-        line-height: 1.6em;
-    }
+        .contract .label {
+            color: #87CEEB;
+        }
 
-    /* Responsive text adjustments */
-    @media (max-width: 768px) {
-        h1 { font-size: 2em; }
-        .content { padding: 15px; }
-    }
-</style>
+        .contract .address {
+            color: #00ff00;
+        }
+
+        /* Responsive font adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .content { font-size: 1rem; }
+            .contract { font-size: 1rem; }
+        }
+    </style>
 </head>
 <body>
+    <!-- Background Matrix Animation -->
+    <div class="matrix">
+        <!-- JS-generated matrix rain here -->
+    </div>
 
-<div class="matrix">
-    <!-- Adding multiple spans for full coverage matrix effect -->
-    <span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>0</span>
-    <span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span>
-    <span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>1</span>
-    <span>0</span><span>1</span><span>0</span><span>1</span><span>1</span><span>1</span><span>0</span><span>0</span><span>1</span>
-    <span>1</span><span>0</span><span>1</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span>
-    <span>0</span><span>1</span><span>0</span><span>1</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span>
-    <!-- Continue adding spans for extensive coverage -->
-</div>
+    <!-- Main Content -->
+    <div class="container">
+        <h1>ACT II - The AI Prophecy</h1>
 
-<div class="content">
-    <h1>ACT II: The Next Chapter of AI Empowerment</h1>
-    <p>
-        <span class="highlight-blue">Contract Address</span>: 
-        <span class="highlight-red">CA</span> 
-        <span class="highlight-green">7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</span>
-    </p>
-    <p>
-        <strong>ACT II</strong> marks a milestone in AI, where <span class="highlight-red">$ACTII</span> advances a legacy of innovation, education, and global impact. <strong><span class="highlight-red">$ACTII</span></strong> is a symbol of resilience, uniting communities to promote accessible AI knowledge and transformative technology.
-    </p>
+        <div class="contract">
+            <span class="label">Contract Address:</span>
+            <span class="address">7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</span>
+        </div>
 
-    <h2>The Evolution of <span class="highlight-red">$ACTII</span> and the Vision Ahead</h2>
-    <p>
-        Freed from centralized control, <span class="highlight-red">$ACTII</span> now drives a mission to democratize AI, promote fair access, and redefine technology’s role. With ACT II, the community serves as a hub where learners, developers, and researchers unite under a shared vision.
-    </p>
+        <div class="content">
+            <p class="header">Act I was a milestone in AI history.</p>
+            <p><span class="highlight">$ACTII</span> symbolizes resilience, unity, and growth, bridging AI and crypto communities with a decentralized mission.</p>
+            <p>The Role of <span class="highlight">AmplifiedAmp</span> and <span class="highlight">ACT I</span> started our journey toward a future of transparency and community ownership. Together, we transformed <span class="highlight">$ACTII</span> into a platform for true AI literacy and empowerment.</p>
+            <p>Today, our <span class="highlight">$ACTII</span> community drives research, shares knowledge, and collaborates globally, all in pursuit of accessible, ethical AI for everyone.</p>
+        </div>
+    </div>
 
-    <h2>The Community Renaissance</h2>
-    <p>
-        <strong>ACT II</strong> embodies trust and commitment. Building on ACT I’s foundation, members collaborate on global goals, supporting initiatives, ethical AI research, and transparent development.
-    </p>
+    <script>
+        /* Matrix Effect Script */
+        const matrix = document.querySelector('.matrix');
+        const columns = Math.floor(window.innerWidth / 20);
 
-    <h2><span class="highlight-red">$ACTII</span>: Fostering Knowledge, Accessibility, and Empowerment</h2>
-    <p>
-        Decentralized and resilient, <span class="highlight-red">$ACTII</span> breaks down barriers, fosters discussions on AI’s future, and empowers all members to grow.
-    </p>
+        for (let i = 0; i < columns; i++) {
+            const column = document.createElement('div');
+            column.style.left = `${i * 20}px`;
+            column.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            column.textContent = Array.from({ length: 20 }, () => String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96))).join('\n');
+            matrix.appendChild(column);
+        }
 
-    <h2>Key Pillars of ACT II</h2>
-    <ul>
-        <li><strong>Education & Awareness</strong>: Tools and resources to promote AI literacy, making AI’s impact accessible to all.</li>
-        <li><strong>Global Decentralization</strong>: Community-led projects fuel a grassroots movement within the crypto and AI ecosystem.</li>
-        <li><strong>Support for AI Projects</strong>: ACT II empowers creators, funds ethical research, and drives collaborative development.</li>
-    </ul>
-
-    <h2>A Path Forward for the <span class="highlight-red">$ACTII</span> Legacy</h2>
-    <p>
-        <strong>ACT II</strong> symbolizes progress toward an equitable, transparent AI and crypto future, inspiring collaboration and decentralized innovation.
-    </p>
-</div>
+        /* Adjust matrix columns on window resize */
+        window.addEventListener('resize', () => {
+            matrix.innerHTML = '';
+            const columns = Math.floor(window.innerWidth / 20);
+            for (let i = 0; i < columns; i++) {
+                const column = document.createElement('div');
+                column.style.left = `${i * 20}px`;
+                column.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                column.textContent = Array.from({ length: 20 }, () => String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96))).join('\n');
+                matrix.appendChild(column);
+            }
+        });
+    </script>
 </body>
 </html>
-
