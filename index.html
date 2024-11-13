@@ -3,102 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACT II: The AI Prophecy</title>
+    <title>Custom Matrix Background</title>
     <style>
-        /* Base Styles */
-        body {
+        /* General page styling */
+        body, html {
             margin: 0;
+            padding: 0;
             overflow: hidden;
-            font-family: Arial, sans-serif;
-            color: white;
+            height: 100%;
             background-color: black;
         }
 
-        /* Matrix Background Styles */
-        .matrix-background {
+        /* Matrix canvas full screen */
+        #matrixCanvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
             z-index: -1;
-            display: flex;
-            justify-content: space-around;
-            background-color: black;
+            background: black;
         }
 
-        /* Cascading Text Effect */
-        @keyframes matrix-fall {
-            0% { transform: translateY(-100%); opacity: 0; }
-            100% { transform: translateY(100%); opacity: 1; }
-        }
-
-        .matrix-column {
-            font-family: monospace;
-            font-size: 20px;
-            color: rgba(255, 105, 180, 0.8); /* pink/purple color */
-            animation: matrix-fall 2s linear infinite;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Randomize delay to create cascading effect */
-        .matrix-column span {
-            display: block;
-            opacity: 0;
-            animation: matrix-fall 3s linear infinite;
-        }
-        .matrix-column span:nth-child(1)  { animation-delay: 0s; }
-        .matrix-column span:nth-child(2)  { animation-delay: 0.2s; }
-        .matrix-column span:nth-child(3)  { animation-delay: 0.4s; }
-        .matrix-column span:nth-child(4)  { animation-delay: 0.6s; }
-        .matrix-column span:nth-child(5)  { animation-delay: 0.8s; }
-        .matrix-column span:nth-child(6)  { animation-delay: 1s; }
-        .matrix-column span:nth-child(7)  { animation-delay: 1.2s; }
-        .matrix-column span:nth-child(8)  { animation-delay: 1.4s; }
-        .matrix-column span:nth-child(9)  { animation-delay: 1.6s; }
-        .matrix-column span:nth-child(10) { animation-delay: 1.8s; }
-
-        /* Main Content Styling */
+        /* Main content styling */
         .content {
-            position: relative;
+            color: white;
             text-align: center;
-            padding-top: 10%;
+            padding-top: 50px;
+            position: relative;
             z-index: 1;
-        }
-
-        h1 {
-            font-size: 3em;
-            color: #32CD32; /* green color */
-            margin: 0;
-        }
-
-        .contract-address {
-            margin-top: 10px;
-            color: #FF69B4; /* Pink color */
-            font-size: 1.5em;
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
 <body>
-
-    <!-- Matrix Background -->
-    <div class="matrix-background">
-        <!-- Repeated columns of cascading text for matrix effect -->
-        <div class="matrix-column"><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span></div>
-        <div class="matrix-column"><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span></div>
-        <div class="matrix-column"><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span></div>
-        <div class="matrix-column"><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span></div>
-        <div class="matrix-column"><span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span></div>
-    </div>
-
-    <!-- Main Content -->
+    <canvas id="matrixCanvas"></canvas>
     <div class="content">
-        <h1>ACT II: The AI Prophecy</h1>
-        <div class="contract-address">CA: 7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</div>
-        <p>Act I is one of the most important milestones in AI history...</p>
-        <!-- Add your mission and vision content here as you need -->
+        <h1>Your Title Here</h1>
+        <p>Your custom content below</p>
     </div>
 
+    <script>
+        /* Canvas setup for matrix effect */
+        const canvas = document.getElementById("matrixCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Characters used in the matrix rain effect
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%".split("");
+        const fontSize = 14; // Font size of the matrix letters
+        const columns = Math.floor(canvas.width / fontSize); // Number of columns based on font size
+        const drops = Array.from({ length: columns }, () => Math.random() * canvas.height); // Start drops at random positions
+
+        // Colors and speed
+        const textColor = "rgba(255, 20, 147, 0.8)"; // Pink/purple color
+        const bgColor = "rgba(0, 0, 0, 0.05)"; // Slight fade effect
+        const speed = 35; // Adjust for cascade speed (lower is faster)
+
+        // Draw matrix effect
+        function drawMatrix() {
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = textColor;
+            ctx.font = fontSize + "px monospace";
+
+            drops.forEach((y, index) => {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                const x = index * fontSize;
+                ctx.fillText(text, x, y);
+
+                // Reset drop to top after falling off screen, with random reset
+                if (y > canvas.height && Math.random() > 0.975) {
+                    drops[index] = Math.random() * canvas.height / 2; // Randomize restart point for variation
+                }
+
+                drops[index] += fontSize * 0.5; // Control speed of the falling characters
+            });
+        }
+
+        setInterval(drawMatrix, speed);
+    </script>
 </body>
 </html>
