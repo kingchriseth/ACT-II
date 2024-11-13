@@ -34,10 +34,9 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        overflow: hidden;
         z-index: -1;
-        font-size: 16px;
-        color: rgba(255, 0, 255, 0.8);
+        font-size: 18px;
+        color: rgba(255, 20, 147, 0.8); /* Bright pink/purple */
         pointer-events: none;
         display: flex;
         flex-wrap: wrap;
@@ -46,24 +45,32 @@
 
     .matrix span {
         width: 1.5%;
-        line-height: 1.2em;
+        line-height: 1.5em;
         animation: fall linear infinite;
+        font-weight: bold;
     }
 
-    .matrix span:nth-child(10n+1) { animation-duration: 2.5s; }
-    .matrix span:nth-child(10n+2) { animation-duration: 3s; }
-    .matrix span:nth-child(10n+3) { animation-duration: 4s; }
-    .matrix span:nth-child(10n+4) { animation-duration: 5s; }
-    .matrix span:nth-child(10n+5) { animation-duration: 3.5s; }
+    /* Different fall durations for varied effect */
+    .matrix span:nth-child(10n+1) { animation-duration: 3s; }
+    .matrix span:nth-child(10n+2) { animation-duration: 4s; }
+    .matrix span:nth-child(10n+3) { animation-duration: 5s; }
+    .matrix span:nth-child(10n+4) { animation-duration: 6s; }
+    .matrix span:nth-child(10n+5) { animation-duration: 7s; }
 
-    /* Title styling */
+    /* Title styling with pulsing effect */
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.85; }
+    }
+
     h1 {
-        font-size: 3em;
+        font-size: 2.8em;
         text-align: center;
         margin: 20px 0;
-        color: lime;
-        text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00, 0 0 40px #0f0;
+        color: limegreen;
+        text-shadow: 0 0 10px #0f0;
         font-weight: bold;
+        animation: pulse 3s ease-in-out infinite;
     }
 
     /* Content styling */
@@ -74,13 +81,14 @@
         color: white;
         background: rgba(0, 0, 0, 0.8);
         border-radius: 8px;
-        box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.3);
+        box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.3);
     }
 
     /* Header styling */
     h2 {
         color: #00BFFF;
         margin-bottom: 15px;
+        font-size: 1.2em;
     }
 
     /* Highlight colors */
@@ -88,11 +96,16 @@
     .highlight-red { color: red; }
     .highlight-green { color: #00FF00; }
 
+    /* Uniform text size */
+    p, ul, li {
+        font-size: 1em;
+        line-height: 1.6em;
+    }
+
     /* Responsive text adjustments */
     @media (max-width: 768px) {
-        h1 { font-size: 2.5em; }
+        h1 { font-size: 2em; }
         .content { padding: 15px; }
-        h2 { font-size: 1.5em; }
     }
 </style>
 </head>
@@ -103,6 +116,9 @@
     <span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>0</span>
     <span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span>
     <span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>1</span>
+    <span>0</span><span>1</span><span>0</span><span>1</span><span>1</span><span>1</span><span>0</span><span>0</span><span>1</span>
+    <span>1</span><span>0</span><span>1</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span>
+    <span>0</span><span>1</span><span>0</span><span>1</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span>
     <!-- Continue adding spans for extensive coverage -->
 </div>
 
