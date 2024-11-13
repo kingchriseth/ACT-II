@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrix Background</title>
+    <title>ACT II - The AI Prophecy</title>
     <style>
         /* General styling for the body */
         body, html {
@@ -31,7 +31,39 @@
             position: relative;
             z-index: 1;
             text-align: center;
-            margin-top: 100px;
+            padding: 50px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ffffff;
+        }
+
+        /* Title styling */
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #39ff14; /* Bright green */
+        }
+
+        /* Contract address styling */
+        .contract-address {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #ff1493; /* Pinkish-purple for contrast */
+        }
+
+        /* Section headers */
+        .section-header {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #ff1493;
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -41,29 +73,48 @@
     
     <!-- Main Content -->
     <div class="content">
-        <h1>Your Title Here</h1>
-        <p>Your custom content below</p>
+        <h1 class="title">Act II: The AI Prophecy</h1>
+        <div class="contract-address">Contract Address: 7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</div>
+        
+        <div class="section-header">The Journey of $ACTII</div>
+        <p>$ACTII stands for AI Community Token and represents resilience, unity, and growth in bridging AI and crypto communities. Originally, the project began to create a decentralized space for AI research, education, and collaboration. Through $ACTII, enthusiasts, developers, and community members come together to advance AI literacy and make the technology accessible for all.</p>
+        
+        <div class="section-header">The Role of AmplifiedAmp and ACT I</div>
+        <p>ACT I was initially co-founded by AmplifiedAmp (Amp) with a promise to foster a decentralized, community-driven ecosystem. However, over time, Amp’s actions prioritized financial gain, leading to a divide between Amp and the community. Despite setbacks, the community banded together, building resilience and unity in the wake of Amp’s departure. This shift granted the community the freedom to rebuild and reimagine $ACTII as a project fully aligned with their values and vision.</p>
+
+        <div class="section-header">The Community's Resilience and Newfound Purpose</div>
+        <p>After Amp’s exit, the $ACTII community emerged stronger and more unified. With over $1 million in funding secured, the community redirected its efforts toward the project’s core mission: advancing AI knowledge and education on a global scale. Community members have since taken leadership roles, transforming $ACTII into a vibrant hub for AI enthusiasts and learners alike.</p>
+
+        <div class="section-header">The Mission of $ACTII: Spreading Knowledge and Empowering People</div>
+        <p>The $ACTII project is now a decentralized AI community with a mission to democratize AI knowledge and make it accessible to everyone. Through initiatives and community-driven content, $ACTII breaks down barriers to understanding AI. Its efforts focus on educating people on AI fundamentals, fostering ethical discussions, and supporting innovative research.</p>
+
+        <div class="section-header">Key Aspects of the $ACTII Ecosystem</div>
+        <p><strong>Education and Awareness:</strong> $ACTII is committed to raising awareness about AI’s potential and risks, ensuring accessibility to all.</p>
+        <p><strong>Decentralized Community:</strong> Since Amp's departure, $ACTII has been a fully community-driven project, empowering all members to participate in shaping the future of AI within the crypto ecosystem.</p>
+        <p><strong>AI Project Support:</strong> $ACTII actively supports AI development initiatives, fostering opportunities for innovation and collaboration.</p>
+
+        <div class="section-header">The Narrative Going Forward</div>
+        <p>With the departure of centralized influence, $ACTII is now a symbol of community power, education, and shared vision. As the journey continues, the $ACTII community is driven by a collective mission to advance AI knowledge and make a lasting positive impact on the future of technology.</p>
+
+        <p>In essence, $ACTII represents an AI-powered crypto community fully owned, governed, and inspired by its members. The community is excited to build a legacy that reflects the strength and potential of decentralized collaboration in the AI era.</p>
     </div>
 
     <script>
-        // Canvas setup
+        // Canvas setup for matrix effect
         const canvas = document.getElementById('matrixCanvas');
         const ctx = canvas.getContext('2d');
 
-        // Adjust canvas size to full window dimensions
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
         const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%".split("");
-        const fontSize = 16; // Font size of the matrix letters
-        const columns = Math.floor(canvas.width / fontSize); // Columns based on font size
-        const drops = Array(columns).fill(0); // Array for each column
+        const fontSize = 16;
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = Array(columns).fill(0);
 
-        // Colors and speed settings
-        const textColor = "rgba(255, 20, 147, 0.8)"; // Purple-pink color for letters
-        const bgColor = "rgba(0, 0, 0, 0.05)"; // Fade effect
+        const textColor = "rgba(255, 20, 147, 0.8)";
+        const bgColor = "rgba(0, 0, 0, 0.05)";
 
-        // Draw the matrix effect
         function drawMatrix() {
             ctx.fillStyle = bgColor;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -77,7 +128,6 @@
 
                 ctx.fillText(text, x, y);
 
-                // Reset drop when it reaches the bottom, with random restart
                 if (y > canvas.height && Math.random() > 0.975) {
                     drops[index] = 0;
                 }
@@ -86,7 +136,6 @@
             });
         }
 
-        // Run the drawMatrix function repeatedly
         setInterval(drawMatrix, 40);
     </script>
 </body>
