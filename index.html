@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Matrix Background</title>
+    <title>Matrix Background</title>
     <style>
-        /* General page styling */
+        /* General styling for the body */
         body, html {
             margin: 0;
             padding: 0;
             overflow: hidden;
-            height: 100%;
             background-color: black;
+            font-family: Arial, sans-serif;
+            color: white;
         }
 
-        /* Matrix canvas full screen */
+        /* Canvas that fills the background */
         #matrixCanvas {
             position: fixed;
             top: 0;
@@ -22,47 +23,47 @@
             width: 100vw;
             height: 100vh;
             z-index: -1;
-            background: black;
+            background-color: black;
         }
 
         /* Main content styling */
         .content {
-            color: white;
-            text-align: center;
-            padding-top: 50px;
             position: relative;
             z-index: 1;
-            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
         }
     </style>
 </head>
 <body>
+    <!-- Matrix Canvas -->
     <canvas id="matrixCanvas"></canvas>
+    
+    <!-- Main Content -->
     <div class="content">
         <h1>Your Title Here</h1>
         <p>Your custom content below</p>
     </div>
 
     <script>
-        /* Canvas setup for matrix effect */
-        const canvas = document.getElementById("matrixCanvas");
-        const ctx = canvas.getContext("2d");
+        // Canvas setup
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
 
+        // Adjust canvas size to full window dimensions
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        // Characters used in the matrix rain effect
         const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%".split("");
-        const fontSize = 14; // Font size of the matrix letters
-        const columns = Math.floor(canvas.width / fontSize); // Number of columns based on font size
-        const drops = Array.from({ length: columns }, () => Math.random() * canvas.height); // Start drops at random positions
+        const fontSize = 16; // Font size of the matrix letters
+        const columns = Math.floor(canvas.width / fontSize); // Columns based on font size
+        const drops = Array(columns).fill(0); // Array for each column
 
-        // Colors and speed
-        const textColor = "rgba(255, 20, 147, 0.8)"; // Pink/purple color
-        const bgColor = "rgba(0, 0, 0, 0.05)"; // Slight fade effect
-        const speed = 35; // Adjust for cascade speed (lower is faster)
+        // Colors and speed settings
+        const textColor = "rgba(255, 20, 147, 0.8)"; // Purple-pink color for letters
+        const bgColor = "rgba(0, 0, 0, 0.05)"; // Fade effect
 
-        // Draw matrix effect
+        // Draw the matrix effect
         function drawMatrix() {
             ctx.fillStyle = bgColor;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -73,18 +74,20 @@
             drops.forEach((y, index) => {
                 const text = letters[Math.floor(Math.random() * letters.length)];
                 const x = index * fontSize;
+
                 ctx.fillText(text, x, y);
 
-                // Reset drop to top after falling off screen, with random reset
+                // Reset drop when it reaches the bottom, with random restart
                 if (y > canvas.height && Math.random() > 0.975) {
-                    drops[index] = Math.random() * canvas.height / 2; // Randomize restart point for variation
+                    drops[index] = 0;
                 }
 
-                drops[index] += fontSize * 0.5; // Control speed of the falling characters
+                drops[index] += fontSize;
             });
         }
 
-        setInterval(drawMatrix, speed);
+        // Run the drawMatrix function repeatedly
+        setInterval(drawMatrix, 40);
     </script>
 </body>
 </html>
