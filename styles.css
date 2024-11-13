@@ -1,61 +1,72 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f9;
-  padding: 20px;
+    margin: 0;
+    overflow: hidden;
 }
 
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #4a90e2;
-  color: white;
-  margin-bottom: 20px;
+.matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black; /* Background color for the matrix effect */
+    z-index: -1; /* Make sure the background is behind all other content */
+    color: rgba(255, 105, 180, 0.6); /* Pinkish color for the matrix letters */
+    font-family: monospace;
+    font-size: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header h1 {
-  font-size: 2em;
+/* Define animation for cascading letters */
+@keyframes matrix {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
 }
 
-header p {
-  font-size: 1.2em;
+.matrix-column {
+    display: inline-block;
+    animation: matrix 2s linear infinite;
+    opacity: 0.6; /* Set base opacity for visual effect */
+    color: rgba(255, 105, 180, 0.8); /* Adjust color as needed for visibility */
 }
 
-main {
-  max-width: 800px;
-  margin: auto;
+/* Randomize delay to create cascading effect */
+@keyframes matrix {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(100%);
+    }
 }
 
-h2 {
-  font-size: 1.8em;
-  color: #4a90e2;
-  margin-bottom: 10px;
+/* Create multiple columns with slight delays for cascading effect */
+@keyframes matrix-fall {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-p, ul {
-  margin-bottom: 15px;
+.matrix-column span {
+    display: block;
+    opacity: 0;
+    animation: matrix-fall 1s linear infinite;
 }
-
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  margin-top: 20px;
-}
+.matrix-column span:nth-child(1)  { animation-delay: 0s; }
+.matrix-column span:nth-child(2)  { animation-delay: 0.2s; }
+.matrix-column span:nth-child(3)  { animation-delay: 0.4s; }
+.matrix-column span:nth-child(4)  { animation-delay: 0.6s; }
+.matrix-column span:nth-child(5)  { animation-delay: 0.8s; }
+.matrix-column span:nth-child(6)  { animation-delay: 1s; }
+.matrix-column span:nth-child(7)  { animation-delay: 1.2s; }
+.matrix-column span:nth-child(8)  { animation-delay: 1.4s; }
+.matrix-column span:nth-child(9)  { animation-delay: 1.6s; }
+.matrix-column span:nth-child(10) { animation-delay: 1.8s; }
