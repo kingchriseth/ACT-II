@@ -5,21 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ACT II: The Next Chapter of AI Empowerment</title>
 <style>
-    /* Basic reset */
+    /* Reset */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    /* Background matrix effect */
+    /* Body styling */
     body {
         background: black;
-        color: #00FF00;
+        color: white;
         font-family: monospace;
         overflow: hidden;
     }
 
+    /* Matrix effect */
     .matrix {
         position: fixed;
         top: 0;
@@ -28,13 +29,14 @@
         height: 100vh;
         overflow: hidden;
         z-index: -1;
+        font-size: 16px;
+        color: rgba(255, 0, 255, 0.8);
+        pointer-events: none;
     }
 
     .matrix span {
-        color: rgba(255, 0, 255, 0.8);
-        font-size: 16px;
-        animation: fall linear infinite;
         display: inline-block;
+        animation: fall linear infinite;
     }
 
     @keyframes fall {
@@ -46,7 +48,7 @@
         }
     }
 
-    /* Generate multiple matrix columns */
+    /* Different animation speeds for a more randomized matrix effect */
     .matrix span:nth-child(10n+1) { animation-duration: 3s; }
     .matrix span:nth-child(10n+2) { animation-duration: 5s; }
     .matrix span:nth-child(10n+3) { animation-duration: 4s; }
@@ -58,37 +60,42 @@
     .matrix span:nth-child(10n+9) { animation-duration: 6.5s; }
     .matrix span:nth-child(10n+10) { animation-duration: 4s; }
 
-    /* Main content styling */
+    /* Title styling */
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+        margin: 20px 0;
+        color: lime;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
+    /* Content styling */
     .content {
         max-width: 800px;
         margin: 50px auto;
         padding: 20px;
-        color: #00FF00;
-        text-shadow: 0 0 10px #00FF00;
+        color: white;
     }
 
-    h1 {
-        font-size: 2em;
-        text-align: center;
-        margin-bottom: 20px;
+    /* Header styling */
+    h2 {
+        color: #00BFFF;
     }
 
+    /* Special colors for specific text */
     .highlight-blue { color: #00BFFF; }
     .highlight-red { color: red; }
     .highlight-green { color: #00FF00; }
-
-    p, h2 {
-        margin: 15px 0;
-    }
 </style>
 </head>
 <body>
 <div class="matrix">
-    <!-- Randomized matrix letters -->
-    <span>01</span><span>00</span><span>11</span><span>10</span><span>01</span><span>00</span><span>11</span><span>10</span><span>01</span><span>11</span>
-    <span>00</span><span>10</span><span>01</span><span>11</span><span>00</span><span>01</span><span>11</span><span>10</span><span>00</span><span>11</span>
-    <span>10</span><span>01</span><span>00</span><span>11</span><span>10</span><span>01</span><span>11</span><span>10</span><span>00</span><span>01</span>
-    <!-- Additional matrix spans here to fill up the screen -->
+    <!-- Randomized matrix letters for cascading effect -->
+    <span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>0</span>
+    <span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span>
+    <span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>1</span>
+    <span>0</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>0</span>
+    <!-- Additional matrix spans here to fill the effect -->
 </div>
 
 <div class="content">
@@ -99,34 +106,34 @@
         <span class="highlight-green">7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</span>
     </p>
     <p>
-        <strong>ACT II</strong> marks an even deeper milestone in AI history, where $ACTII broadens the community’s legacy with a mission to innovate, educate, and expand globally. <strong>$ACTII</strong> represents not just a token but a commitment to resilient, decentralized growth, built by and for the community that launched the AI Community Token’s journey. With ACT II, the community-driven mission intensifies to bring accessible AI knowledge, collaborative research, and ethical AI development to everyone.
+        <strong>ACT II</strong> marks an even deeper milestone in AI history, where <span class="highlight-red">$ACTII</span> broadens the community’s legacy with a mission to innovate, educate, and expand globally. <strong><span class="highlight-red">$ACTII</span></strong> represents not just a token but a commitment to resilient, decentralized growth, built by and for the community that launched the AI Community Token’s journey. With ACT II, the community-driven mission intensifies to bring accessible AI knowledge, collaborative research, and ethical AI development to everyone.
     </p>
 
-    <h2>The Evolution of $ACTII and the Vision Ahead</h2>
+    <h2>The Evolution of <span class="highlight-red">$ACTII</span> and the Vision Ahead</h2>
     <p>
-        With the power of the $ACTII token, our community now has full control, freed from centralized restrictions and amplified by a foundation that’s financially and structurally sound. $ACTII’s journey begins with a promise to democratize AI, promote fair access, and fuel ethical and responsible development in ways that redefine technology’s role in our daily lives. Through this next phase, the ACT community serves as a hub for innovation, where learners, developers, and researchers find resources, support, and a unified voice.
+        With the power of the <span class="highlight-red">$ACTII</span> token, our community now has full control, freed from centralized restrictions and amplified by a foundation that’s financially and structurally sound. <span class="highlight-red">$ACTII</span>’s journey begins with a promise to democratize AI, promote fair access, and fuel ethical and responsible development in ways that redefine technology’s role in our daily lives. Through this next phase, the ACT community serves as a hub for innovation, where learners, developers, and researchers find resources, support, and a unified voice.
     </p>
 
     <h2>The Community Renaissance</h2>
     <p>
-        <strong>ACT II</strong> represents a story of trust and commitment. Building on the foundation of ACT I, community members drive forward with an intent to uphold resilience, shared governance, and shared growth. With $ACTII, we’re empowered to further our global goals, allocating resources to sustainable initiatives, supporting ethical AI research, and crafting projects that foster transparency and accessibility in AI.
+        <strong>ACT II</strong> represents a story of trust and commitment. Building on the foundation of ACT I, community members drive forward with an intent to uphold resilience, shared governance, and shared growth. With <span class="highlight-red">$ACTII</span>, we’re empowered to further our global goals, allocating resources to sustainable initiatives, supporting ethical AI research, and crafting projects that foster transparency and accessibility in AI.
     </p>
 
-    <h2>$ACTII: Fostering Knowledge, Accessibility, and Empowerment</h2>
+    <h2><span class="highlight-red">$ACTII</span>: Fostering Knowledge, Accessibility, and Empowerment</h2>
     <p>
-        Now fully decentralized, $ACTII reflects the strength of a truly autonomous community. Through collaborative projects and resources, we aim to dissolve barriers to understanding AI, foster open discussions on AI’s future, and empower members of all skill levels to learn, build, and grow.
+        Now fully decentralized, <span class="highlight-red">$ACTII</span> reflects the strength of a truly autonomous community. Through collaborative projects and resources, we aim to dissolve barriers to understanding AI, foster open discussions on AI’s future, and empower members of all skill levels to learn, build, and grow.
     </p>
 
     <h2>Key Pillars of ACT II</h2>
     <ul>
-        <li><strong>Education & Awareness</strong>: Making AI’s opportunities and challenges accessible to all, $ACTII provides tools and resources to support AI literacy.</li>
+        <li><strong>Education & Awareness</strong>: Making AI’s opportunities and challenges accessible to all, <span class="highlight-red">$ACTII</span> provides tools and resources to support AI literacy.</li>
         <li><strong>Global Decentralization</strong>: Community-directed projects give members a voice in decisions, fueling grassroots movements within the crypto and AI ecosystem.</li>
         <li><strong>Support for AI Projects</strong>: Through ACT II’s initiatives, we empower creators, fund ethical AI research, and drive collective development.</li>
     </ul>
 
-    <h2>A Path Forward for the $ACTII Legacy</h2>
+    <h2>A Path Forward for the <span class="highlight-red">$ACTII</span> Legacy</h2>
     <p>
-        <strong>ACT II</strong> is more than a token; it’s a movement toward an equitable, transparent future in AI and crypto. With an open, globally-minded vision, the $ACTII community advances a world where AI serves as a bridge to shared knowledge, collaboration, and empowerment, inspiring a legacy of decentralized progress.
+        <strong>ACT II</strong> is more than a token; it’s a movement toward an equitable, transparent future in AI and crypto. With an open, globally-minded vision, the <span class="highlight-red">$ACTII</span> community advances a world where AI serves as a bridge to shared knowledge, collaboration, and empowerment, inspiring a legacy of decentralized progress.
     </p>
 </div>
 </body>
