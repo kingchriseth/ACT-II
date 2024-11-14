@@ -3,65 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Act II loading...</title>
+    <title>ACT II Loading...</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        /* Reset some default styles */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* General Body Styling */
+        /* Body Styling */
         body {
-            font-family: 'Press Start 2P', monospace; /* Matrix-style font */
-            background-color: #111; /* Dark background */
-            color: #fff; /* White text */
+            font-family: 'Press Start 2P', monospace;
+            background-color: #111;
+            color: #fff;
             line-height: 1.6;
             padding: 0;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-            text-align: left; /* Left align all text */
+            overflow-x: hidden;
+            text-align: center;
         }
 
-        /* Header Section */
+        /* Header Styling */
         header {
             padding: 20px 0;
-            text-align: center;
-            font-size: 2.5em; /* Default font size */
+            font-size: 2em;
         }
 
         header h1 {
-            color: #fff; /* White text for title */
+            color: #fff;
             font-family: 'Press Start 2P', monospace;
             letter-spacing: 5px;
             word-wrap: break-word;
+            margin-bottom: 0;
         }
 
         header h1::after {
             content: "|";
             animation: blink 1s step-end infinite;
-            color: #d81b60; /* Blinking pink cursor */
+            color: #d81b60;
         }
 
-        /* Blinking cursor animation */
         @keyframes blink {
             50% {
                 opacity: 0;
             }
         }
 
-        /* Contract address styling */
+        /* Contract Address Section */
         .contract-address-container {
             position: relative;
             display: inline-block;
-            text-align: center;
             margin-top: 20px;
         }
 
         .contract-address {
             font-size: 1.2em;
-            color: #d81b60; /* Matching pink for contract address */
+            color: #d81b60;
             margin-top: 10px;
             z-index: 1;
         }
@@ -72,22 +70,18 @@
             top: 0;
             content: "|";
             animation: blink 1s step-end infinite;
-            color: #d81b60; /* Red for blinking cursor */
-            z-index: 0; /* Cursor stays behind the text */
+            color: #d81b60;
+            z-index: 0;
         }
 
-        /* Section Styling */
+        /* Main Content Section */
         section {
-            padding: 20px 20px;
-            width: 100%;
-            max-width: 90%; /* Ensures responsive width */
-            margin: 0 auto;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
             background-color: #111;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-            margin-bottom: 40px;
-            text-align: center;
-            max-width: 1000px; /* Keep max width */
         }
 
         h2 {
@@ -98,74 +92,69 @@
 
         p {
             font-size: 1.1em;
-            margin-top: 10px;
             color: #bbb;
+            margin-bottom: 15px;
             line-height: 1.7;
-            text-align: center;
-            max-width: 90%;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         ul {
             list-style-type: none;
             padding-left: 0;
+            margin-top: 10px;
         }
 
         ul li {
-            margin-bottom: 10px;
             font-size: 1.2em;
             color: #ddd;
+            margin-bottom: 10px;
         }
 
-        /* Footer */
+        /* Bottom Blinking Cursor */
         .bottom-cursor {
             font-size: 3em;
-            color: #d81b60; /* Blinking pink cursor */
+            color: #d81b60;
             display: inline-block;
             font-family: 'Press Start 2P', monospace;
             letter-spacing: 5px;
             animation: blink 1s step-end infinite;
             margin-top: 30px;
-            text-align: center;
         }
 
-        /* Media Queries for responsiveness */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            /* Header font size adjustment for mobile */
             header h1 {
                 font-size: 1.8em;
             }
 
-            /* Section adjustments for mobile */
             section {
-                padding: 10px 15px; /* Adjust padding for mobile */
-                max-width: 100%;
+                padding: 10px;
+                margin: 20px 10px;
+                max-width: 95%;
             }
 
-            /* Ensure the contract address is also responsive */
             .contract-address {
                 font-size: 1em;
             }
 
             .contract-address-cursor {
-                font-size: 1em;
+                font-size: 1.5em;
             }
 
-            /* Adjust heading sizes for mobile */
             h2 {
                 font-size: 1.5em;
             }
 
-            /* Adjust paragraph size for mobile */
             p {
                 font-size: 1em;
-                padding: 0 20px; /* Add padding to prevent text from touching edges */
+                padding: 0 20px;
             }
 
-            /* Adjust bottom cursor size */
+            ul li {
+                font-size: 1em;
+            }
+
             .bottom-cursor {
-                font-size: 2em;
+                font-size: 2.5em;
             }
         }
 
