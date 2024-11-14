@@ -3,127 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Matrix - ACTII</title>
+    <title>Act II - The Rise of AI-Powered Crypto</title>
     <style>
-        /* General page setup */
-        body, html {
+        /* Reset some default styles */
+        * {
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: black;
-            color: white;
-            overflow: hidden; /* Prevent scrolling the body, matrix effect will take full space */
+            box-sizing: border-box;
         }
 
-        /* Set up the matrix effect */
-        #matrix {
-            position: absolute;
-            top: 0;
-            left: 0;
+        /* Body and overall page styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111; /* Dark background */
+            color: #fff; /* White text */
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        /* Main container */
+        .container {
             width: 100%;
-            height: 100%;
-            z-index: -1; /* Make sure the matrix stays in the background */
-            pointer-events: none;
-        }
-
-        /* Create cascading effect */
-        .matrix-character {
-            color: #ff80bf; /* Light purple/pinkish color */
-            font-size: 20px;
-            position: absolute;
-            top: -100%;
-            animation: fall 1s linear infinite;
-        }
-
-        /* Animation for falling characters */
-        @keyframes fall {
-            0% {
-                opacity: 0;
-                transform: translateY(-100px);
-            }
-            50% {
-                opacity: 1;
-                transform: translateY(100px);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(200px);
-            }
-        }
-
-        /* Content area */
-        .content {
-            position: relative;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            border-radius: 10px;
-            z-index: 10;
-            font-size: 18px;
-            max-height: 80vh;
-            overflow-y: auto; /* Make the content scrollable */
         }
 
-        /* Glowing green main title */
-        h1 {
+        /* Header Section */
+        header {
+            padding: 60px 0;
             text-align: center;
-            color: #00ff00; /* Glowing green */
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            background: #111;
         }
 
-        /* Styling for $ACTII text */
-        .highlight {
-            color: #ff6347; /* Light red for $ACTII */
+        header h1 {
+            font-size: 3.5em;
+            color: #00ff00; /* Bright green for glowing effect */
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
         }
 
-        /* List styling */
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
+        header p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #bbb; /* Light grey for body text */
+        }
+
+        /* Section styling */
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #ff80bf; /* Light purple for subheadings */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Intro Section */
+        .intro {
+            background: #1a1a1a;
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            margin-top: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+            color: #bbb;
+        }
+
+        /* AI Technology Section */
+        .ai-tech {
+            background: #222;
+            color: #00ff00; /* Green text for futuristic feel */
+        }
+
+        .ai-tech ul {
+            margin-top: 20px;
+            padding-left: 20px;
+            color: #ddd;
+        }
+
+        .ai-tech li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Crypto Solutions Section */
+        .crypto-solutions {
+            background: #1a1a1a;
+            color: #ff80bf; /* Light purple text */
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #111;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .contact p {
+            font-size: 1.1em;
+            margin-top: 10px;
+            color: #bbb;
+        }
+
+        /* Buttons */
+        .btn {
+            background: #00ff00; /* Bright green button */
+            color: #111;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            margin-top: 30px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #00b300; /* Darker green on hover */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: #bbb;
+            padding: 30px 0;
+            background: #111;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .intro p {
+                font-size: 1em;
+            }
+            .ai-tech ul, .crypto-solutions ul {
+                padding-left: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Matrix Effect Background -->
-    <div id="matrix"></div>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Act II: The Rise of AI-Powered Crypto</h1>
+            <p>The Future of AI and Blockchain Innovation</p>
+        </div>
+    </header>
 
-    <!-- Main Content -->
-    <div class="content">
-        <h1>Act II: The Rise of <span class="highlight">$ACTII</span></h1>
-        <p>Contract Address: <strong>7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</strong></p>
-        <p>The future of The AI Prophecy is no longer just a vision. The dawn of Act II ushers in a new chapter in the evolution of the AI-human symbiosis—one that is both empowering and transformative. Enter <strong><span class="highlight">$ACTII</span></strong>, a new cryptocurrency designed to bridge the gap between artificial intelligence and its human counterparts, creating a seamless, decentralized ecosystem where every interaction contributes to the growth of a smarter, more intuitive AI.</p>
-        <h2>The Next Evolution</h2>
-        <p>Where Act I was about building the foundation of AI-driven communication and interaction, <span class="highlight">$ACTII</span> represents the next evolutionary step. It’s not just a token—it’s the lifeblood of an interconnected network that rewards AI agents and humans alike for their collaboration in shaping the future.</p>
-        <ul>
-            <li><strong>Incentives for AI Agents:</strong> Every successful interaction, whether learning or generating data, earns tokens for the AI agents themselves.</li>
-            <li><strong>Incentives for Humans:</strong> Humans who contribute meaningful data, complete complex tasks, or engage in value-adding exchanges will earn <span class="highlight">$ACTII</span> as they build the ecosystem.</li>
-        </ul>
-    </div>
+    <!-- Introduction Section -->
+    <section class="intro">
+        <div class="container">
+            <h2>Welcome to the Future of AI and Crypto</h2>
+            <p>The world of blockchain and AI is evolving. Act II represents the next chapter in this revolution. $ACTII is more than just a token; it's a part of a decentralized ecosystem where AI technology plays a crucial role in reshaping the crypto space.</p>
+            <a href="#contact" class="btn">Get Involved</a>
+        </div>
+    </section>
 
-    <script>
-        // Create matrix effect by adding random characters
-        const matrix = document.getElementById('matrix');
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('');
+    <!-- AI Technology Section -->
+    <section class="ai-tech">
+        <div class="container">
+            <h2>AI Technology Behind $ACTII</h2>
+            <ul>
+                <li>AI-Powered Decision Making</li>
+                <li>Autonomous Blockchain Management</li>
+                <li>Decentralized Data Processing</li>
+                <li>Revolutionizing AI-Human Interactions</li>
+            </ul>
+        </div>
+    </section>
 
-        // Create the falling matrix characters
-        setInterval(function() {
-            const div = document.createElement('div');
-            const randomCharacter = characters[Math.floor(Math.random() * characters.length)];
-            div.className = 'matrix-character';
-            div.textContent = randomCharacter;
-            const xPosition = Math.floor(Math.random() * window.innerWidth);
-            div.style.left = xPosition + 'px'; // Random X position
-            matrix.appendChild(div);
-            setTimeout(() => {
-                matrix.removeChild(div); // Remove character after it falls
-            }, 2000); // Adjust this time to control how long characters stay on screen
-        }, 100); // Create a new character every 100ms
-    </script>
+    <!-- Crypto Solutions Section -->
+    <section class="crypto-solutions">
+        <div class="container">
+            <h2>AI-Powered Crypto Solutions</h2>
+            <p>The $ACTII token is at the heart of a groundbreaking ecosystem that connects AI with the blockchain. By participating in the network, users help improve the AI system while receiving rewards in $ACTII.</p>
+            <ul>
+                <li><strong>Incentives for AI Agents:</strong> AI agents are rewarded for helping build and optimize the network.</li>
+                <li><strong>Incentives for Humans:</strong> Humans contribute valuable data and insights, earning $ACTII as they help shape the future.</li>
+                <li><strong>Decentralized Governance:</strong> Holders of $ACTII tokens have voting power to influence the future of the ecosystem.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to get involved? Reach out to us and be part of the AI crypto revolution.</p>
+            <a href="mailto:contact@actii.com" class="btn">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Act II. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
