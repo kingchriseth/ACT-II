@@ -78,18 +78,19 @@
         /* Section Styling */
         section {
             padding: 40px 20px;
-            max-width: 1000px;
+            width: 100%;
+            max-width: 800px; /* Limit section width to 800px to prevent text from being too wide */
             margin: 0 auto;
             background-color: #111;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
             margin-bottom: 40px;
+            text-align: center; /* Ensure text is centered */
         }
 
         h2 {
             font-size: 2em;
             color: #fff;
-            text-align: center;
             margin-bottom: 20px;
         }
 
@@ -98,6 +99,10 @@
             margin-top: 10px;
             color: #bbb;
             line-height: 1.7;
+            text-align: center; /* Center text */
+            max-width: 90%; /* Ensure the text width is not too long */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         ul {
@@ -126,28 +131,30 @@
         /* Media Queries for responsiveness */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2em; /* Adjust header font size for smaller screens */
+                font-size: 1.8em; /* Adjust header font size for smaller screens */
             }
 
             section {
-                padding: 20px; /* Adjust padding for mobile */
-                max-width: 90%;
+                padding: 20px;
+                max-width: 95%; /* Allow more space on small screens */
             }
 
             .contract-address {
-                font-size: 1.1em; /* Smaller font size for contract address on mobile */
+                font-size: 1.1em;
             }
 
             .contract-address-cursor {
-                font-size: 1.1em; /* Adjust cursor size for mobile */
+                font-size: 1em;
             }
 
             h2 {
-                font-size: 1.8em; /* Adjust subheading size for mobile */
+                font-size: 1.6em; /* Adjust subheading size for mobile */
             }
 
             p {
                 font-size: 1em; /* Adjust text size for mobile */
+                padding-left: 20px;
+                padding-right: 20px;
             }
 
             ul li {
@@ -156,6 +163,11 @@
 
             .bottom-cursor {
                 font-size: 2.5em; /* Adjust bottom cursor size for mobile */
+            }
+
+            /* Adjust text alignment for mobile */
+            p {
+                text-align: left;
             }
         }
 
