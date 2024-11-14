@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Act II loading...</title>
+    <title>Act II - The Future of AI and Crypto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         /* Reset some default styles */
         * {
@@ -12,7 +13,7 @@
             box-sizing: border-box;
         }
 
-        /* Body and overall page styling */
+        /* General Body Styling */
         body {
             font-family: 'Press Start 2P', monospace; /* Matrix-style font */
             background-color: #111; /* Dark background */
@@ -26,43 +27,41 @@
         /* Header Section */
         header {
             padding: 60px 0;
-            text-align: left;
-        }
-
-        /* Matrix-like font for the title */
-        header h1 {
+            text-align: center;
             font-size: 3.5em;
-            color: #fff; /* White text for title */
-            display: inline-block;
-            font-family: 'Press Start 2P', monospace; /* Monospace font for Matrix effect */
-            letter-spacing: 5px; /* Make text closer together */
         }
 
-        /* Blinking cursor effect for header */
+        header h1 {
+            color: #fff; /* White text for title */
+            font-family: 'Press Start 2P', monospace;
+            letter-spacing: 5px;
+        }
+
         header h1::after {
-            content: "|"; /* Create a blinking cursor effect */
+            content: "|";
             animation: blink 1s step-end infinite;
             color: #d81b60; /* Blinking pink cursor */
         }
 
-        /* Blinking cursor animation */
         @keyframes blink {
             50% {
                 opacity: 0;
             }
         }
 
-        /* Contract address styling */
+        /* Contract Address Section */
         .contract-address-container {
             position: relative;
             display: inline-block;
+            text-align: center;
+            margin-top: 40px;
         }
 
         .contract-address {
             font-size: 1.2em;
             color: #d81b60; /* Matching pink for contract address */
             margin-top: 10px;
-            z-index: 1; /* Ensure text appears above the cursor */
+            z-index: 1;
         }
 
         .contract-address-cursor {
@@ -75,70 +74,43 @@
             z-index: 0; /* Cursor stays behind the text */
         }
 
-        /* Section styling */
+        /* Section Styling */
         section {
             padding: 60px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            margin-bottom: 40px;
         }
 
         h2 {
             font-size: 2.5em;
-            color: #fff; /* White for subheadings */
+            color: #fff;
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        /* Intro Section */
-        .intro {
-            background: #111;
-            text-align: left;
-        }
-
-        .intro p {
+        p {
             font-size: 1.1em;
             margin-top: 10px;
-            max-width: 800px;
-            margin: 20px auto;
             color: #bbb;
+            line-height: 1.7;
         }
 
-        /* AI Technology Section */
-        .ai-tech {
-            background: #111;
+        ul {
+            list-style-type: none;
+            padding-left: 0;
         }
 
-        .ai-tech ul {
-            margin-top: 20px;
-            padding-left: 20px;
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.2em;
             color: #ddd;
         }
 
-        .ai-tech li {
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-
-        /* Crypto Solutions Section */
-        .crypto-solutions {
-            background: #111;
-            color: #fff; /* White text */
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-            header p {
-                font-size: 1em;
-            }
-            .intro p {
-                font-size: 1em;
-            }
-            .ai-tech ul, .crypto-solutions ul {
-                padding-left: 15px;
-            }
-        }
-
-        /* Add a blinking cursor at the bottom of the page */
+        /* Footer */
         .bottom-cursor {
             font-size: 3em;
             color: #d81b60; /* Blinking pink cursor */
@@ -147,7 +119,26 @@
             letter-spacing: 5px;
             animation: blink 1s step-end infinite;
             margin-top: 30px;
-            text-align: left;
+            text-align: center;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .contract-address {
+                font-size: 1em;
+            }
+
+            .contract-address-cursor {
+                font-size: 1em;
+            }
         }
 
     </style>
@@ -156,7 +147,7 @@
 
     <!-- Header Section -->
     <header>
-        <h1>Act II loading...</h1>
+        <h1>Act II: The Future of AI and Crypto</h1>
     </header>
 
     <!-- Contract Address Section -->
@@ -167,7 +158,7 @@
         </div>
     </section>
 
-    <!-- The Journey of $ACT: A Vision for the Future -->
+    <!-- The Journey of $ACTII: A Vision for the Future -->
     <section>
         <h2>The Journey of $ACTII: A Vision for the Future</h2>
         <p>The story of $ACTII is one of transformation, innovation, and collective resilience. At its core, $ACTII is not just a token or a project—it's a movement. A movement powered by a community that believes in the potential of artificial intelligence and the transformative possibilities it holds for our future.</p>
@@ -186,7 +177,7 @@
     </section>
 
     <!-- AI Technology Section -->
-    <section class="ai-tech">
+    <section>
         <h2>The Vision Behind $ACTII</h2>
         <p>The world is changing. $ACTII embodies the power of artificial intelligence, and the future of AI lies in its ability to collaborate, learn, and adapt alongside humanity. It represents a decentralized ecosystem that grows with each passing moment.</p>
         <ul>
@@ -198,10 +189,11 @@
     </section>
 
     <!-- Crypto Solutions Section -->
-    <section class="crypto-solutions">
+    <section>
         <h2>$ACTII: Decentralized, Yet Unified</h2>
         <p>The future of $ACTII is decentralized, allowing for the collective ownership and governance of a global AI ecosystem. Together, we are building a space where AI knowledge is accessible to all, and the power to shape the future is in the hands of the many.</p>
         <ul>
             <li><strong>AI-Powered Decision Making:</strong> Leverage the power of AI for better, more efficient decision-making.</li>
             <li><strong>Empowering Communities:</strong> A decentralized approach to ensure that no one is left behind.</li>
-            <li><strong>AI Literacy for All:</strong> Promoting understanding and engagement with AI across the globe
+            <li><strong>AI Literacy for All:</strong> Promoting understanding and engagement with AI across the globe.</li>
+            <li><strong>Innovating for the Future:</strong> Building a foundation for sustainable, ethical
