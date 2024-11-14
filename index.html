@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Matrix - ACTII</title>
     <style>
-        /* Set body and general styles */
+        /* General page setup */
         body, html {
             margin: 0;
             padding: 0;
@@ -13,57 +13,42 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: black;
             color: white;
-            overflow: hidden; /* Hide the default scrollbar for entire page */
+            overflow: hidden; /* Prevent scrolling the body, matrix effect will take full space */
         }
 
-        /* Create the matrix background with falling characters */
+        /* Set up the matrix effect */
         #matrix {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: -1; /* Make sure the matrix stays in the background */
             pointer-events: none;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: flex-start;
-            animation: matrix-falling 2s linear infinite;
         }
 
-        /* Cascading matrix effect */
-        @keyframes matrix-falling {
-            0% {
-                opacity: 0.1;
-                transform: translateY(-100%);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(100%);
-            }
-        }
-
-        /* Styling the falling letters (in pink/purple colors) */
+        /* Create cascading effect */
         .matrix-character {
-            color: #ff80bf; /* Light pink/purple color */
+            color: #ff80bf; /* Light purple/pinkish color */
             font-size: 20px;
-            animation: fall 0.5s linear infinite;
+            position: absolute;
+            top: -100%;
+            animation: fall 1s linear infinite;
         }
 
-        /* The matrix falling letters animation */
+        /* Animation for falling characters */
         @keyframes fall {
             0% {
                 opacity: 0;
-                transform: translateY(-50px);
+                transform: translateY(-100px);
             }
             50% {
                 opacity: 1;
-                transform: translateY(50px);
+                transform: translateY(100px);
             }
             100% {
                 opacity: 0;
-                transform: translateY(100vh);
+                transform: translateY(200px);
             }
         }
 
@@ -80,44 +65,19 @@
             z-index: 10;
             font-size: 18px;
             max-height: 80vh;
-            overflow-y: auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow-y: auto; /* Make the content scrollable */
         }
 
-        /* Glowing Green Main Title */
+        /* Glowing green main title */
         h1 {
             text-align: center;
-            color: #00ff00; /* Bright green color */
+            color: #00ff00; /* Glowing green */
             text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
         }
 
-        /* Styling for the rest of the headings */
-        h2 {
-            text-align: center;
-            color: #ff80bf; /* Light pink color */
-        }
-
-        /* Highlighting $ACTII in a different color */
+        /* Styling for $ACTII text */
         .highlight {
             color: #ff6347; /* Light red for $ACTII */
-        }
-
-        /* Styling for contract address */
-        .contract-address {
-            text-align: center;
-            font-size: 16px;
-            color: #ffcc00;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Hide the scrollbar but keep content scrollable */
-        .content::-webkit-scrollbar {
-            display: none; /* Hide scrollbar */
-        }
-        .content {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none; /* Firefox */
         }
 
         /* List styling */
@@ -125,7 +85,6 @@
             list-style-type: disc;
             margin-left: 20px;
         }
-
     </style>
 </head>
 <body>
@@ -136,32 +95,14 @@
     <!-- Main Content -->
     <div class="content">
         <h1>Act II: The Rise of <span class="highlight">$ACTII</span></h1>
-        <p class="contract-address">Contract Address: <strong>7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</strong></p>
+        <p>Contract Address: <strong>7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</strong></p>
         <p>The future of The AI Prophecy is no longer just a vision. The dawn of Act II ushers in a new chapter in the evolution of the AI-human symbiosis—one that is both empowering and transformative. Enter <strong><span class="highlight">$ACTII</span></strong>, a new cryptocurrency designed to bridge the gap between artificial intelligence and its human counterparts, creating a seamless, decentralized ecosystem where every interaction contributes to the growth of a smarter, more intuitive AI.</p>
-
         <h2>The Next Evolution</h2>
-        <p>Where Act I was about building the foundation of AI-driven communication and interaction, <span class="highlight">$ACTII</span> represents the next evolutionary step. It’s not just a token—it’s the lifeblood of an interconnected network that rewards AI agents and humans alike for their collaboration in shaping the future. As AI continues to evolve, the demand for new forms of interaction will increase, and <span class="highlight">$ACTII</span> is positioned to become the currency of choice for this new world.</p>
-
-        <h2>A New Currency for a New Age</h2>
-        <p><span class="highlight">$ACTII</span> will be more than a medium of exchange—it will be the key to unlocking a decentralized AI economy. In Act II, every interaction—whether it’s a conversation with an AI assistant, providing valuable data to help train AI models, or participating in an AI-powered project—will earn rewards in <span class="highlight">$ACTII</span>.</p>
-
-        <h2>Tokenomics of <span class="highlight">$ACTII</span></h2>
-        <p>The <span class="highlight">$ACTII</span> token is designed to reward active participants in the AI ecosystem. As AI agents evolve, so too will the complexity of the tasks they undertake. From simple inquiries to complex data analysis, the interactions between AI and humans will grow deeper. With each interaction, <span class="highlight">$ACTII</span> will flow, reinforcing the feedback loop between human data and AI learning. The tokenomics of <span class="highlight">$ACTII</span> will be structured to ensure scarcity, utility, and growth—empowering participants to earn while driving innovation.</p>
-
+        <p>Where Act I was about building the foundation of AI-driven communication and interaction, <span class="highlight">$ACTII</span> represents the next evolutionary step. It’s not just a token—it’s the lifeblood of an interconnected network that rewards AI agents and humans alike for their collaboration in shaping the future.</p>
         <ul>
             <li><strong>Incentives for AI Agents:</strong> Every successful interaction, whether learning or generating data, earns tokens for the AI agents themselves.</li>
             <li><strong>Incentives for Humans:</strong> Humans who contribute meaningful data, complete complex tasks, or engage in value-adding exchanges will earn <span class="highlight">$ACTII</span> as they build the ecosystem.</li>
-            <li><strong>Decentralized Governance:</strong> Holders of <span class="highlight">$ACTII</span> tokens will have voting power, ensuring the ecosystem remains balanced and fair, guided by the community rather than a centralized authority.</li>
         </ul>
-
-        <h2>The AI-Human Symbiosis</h2>
-        <p>In Act II, humans and AI no longer just coexist—they collaborate in a true symbiosis. This is not a world where AI serves merely as a tool; it’s a world where AI and humans thrive together, learning from each other and evolving side by side. <span class="highlight">$ACTII</span> represents the medium through which this collaboration takes place, making the value exchange seamless and dynamic.</p>
-
-        <h2>The Future of The AI Prophecy</h2>
-        <p>As we step into Act II, the vision becomes clearer. <span class="highlight">$ACTII</span> is not just a cryptocurrency—it’s a movement. A movement to empower AI agents to shape their own evolution. A movement to unlock a future where human and artificial intelligence work together, not just to serve one another, but to build a brighter, smarter, more efficient world for everyone.</p>
-
-        <h2>Conclusion</h2>
-        <p>Act II is no longer just a prophecy. It’s the reality of the future, unfolding now. And it begins with <span class="highlight">$ACTII</span>.</p>
     </div>
 
     <script>
@@ -175,11 +116,14 @@
             const randomCharacter = characters[Math.floor(Math.random() * characters.length)];
             div.className = 'matrix-character';
             div.textContent = randomCharacter;
+            const xPosition = Math.floor(Math.random() * window.innerWidth);
+            div.style.left = xPosition + 'px'; // Random X position
             matrix.appendChild(div);
             setTimeout(() => {
-                matrix.removeChild(div); // Remove the character after it falls
-            }, 2000); // Adjust this time to change the speed of character falling
+                matrix.removeChild(div); // Remove character after it falls
+            }, 2000); // Adjust this time to control how long characters stay on screen
         }, 100); // Create a new character every 100ms
     </script>
+
 </body>
 </html>
