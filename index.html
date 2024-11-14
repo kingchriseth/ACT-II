@@ -1,257 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Webpage</title>
-  <!-- Embedded CSS -->
-  <style>
-    /* Google Fonts */
-    @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
-    @import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&display=swap");
-
-    /* Global Styles */
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      width: 100%;
-      height: 100%;
-      font-family: Inconsolata, monospace;
-      background-color: #19161e;
-      color: #fff;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Specific Layout Styles */
-    .container {
-      padding: 2.5rem 2rem;
-    }
-
-    .mac-terminal {
-      background-color: #000;
-      padding: 20px;
-      border-radius: 5px;
-      width: 100%;
-      height: 110%;
-      margin: 0 auto;
-    }
-
-    /* Header Styles */
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 4rem;
-      border-bottom: 1px solid hsla(0, 0%, 100%, .3);
-      padding: 0 1.4rem;
-    }
-
-    /* Keyframes */
-    @keyframes flash {
-      0% { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Custom Variables */
-    :root {
-      --color-primary: #ee75d2;
-      --color-secondary: #75d8ee;
-      --color-tertiary: #deee75;
-      --color-quaternary: #9375ee;
-      --color-surface: #271c22;
-      --brightness: 1;
-    }
-
-    /* Output Area */
-    #output {
-      position: relative;
-      text-align: center;
-      border-radius: 2rem;
-      font-family: SF Mono, monospace;
-      overflow: hidden;
-      filter: drop-shadow(0 0 10rem color-mix(in srgb, var(--color), transparent 20%)) brightness(var(--brightness));
-      transition: filter .3s linear;
-      white-space: nowrap;
-      background: #000;
-    }
-
-    /* Body and Rows */
-    .body {
-      font-size: 1.2rem;
-    }
-
-    .body__row {
-      margin-top: 1.3rem;
-      line-height: 1.7rem;
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-    }
-
-    /* Git Branch Styles */
-    .body__row-arrow {
-      width: .8rem;
-      height: .6rem;
-      background-color: #40e800;
-      -webkit-clip-path: polygon(0 30%, 60% 30%, 60% 0, 100% 50%, 60% 100%, 60% 70%, 0 70%);
-      clip-path: polygon(0 30%, 60% 30%, 60% 0, 100% 50%, 60% 100%, 60% 70%, 0 70%);
-      margin-right: .9rem;
-    }
-
-    /* Additional Styles */
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a.labs-follow-me {
-      left: 2rem;
-      right: 2rem;
-      bottom: 1rem;
-      top: unset;
-      text-align: center;
-    }
-
-    /* More custom properties */
-    :root {
-      --tp-base-background-color: var(--color-surface);
-      --tp-button-background-color: var(--color-secondary);
-      --tp-container-background-color: hsla(230, 7%, 75%, .1);
-      --tp-input-background-color: hsla(230, 7%, 75%, .1);
-    }
-
-    /* Home Page Styles */
-    .Home_main__2uIek {
-      height: 3100px;
-      padding: 20px;
-    }
-
-    .Home_infos__KQuRm, .Home_main__2uIek {
-      display: grid;
-      justify-content: center;
-      width: 100%;
-    }
-
-    .Home_infos__KQuRm {
-      transition: all .5s;
-      border-radius: 10px;
-      padding: 50px;
-      margin: 50px 0;
-      color: #fff;
-    }
-
-    .Home_pfps__bMugZ {
-      display: flex;
-      flex-wrap: wrap;
-      margin: auto;
-    }
-
-    .Home_pfps__bMugZ img {
-      margin-right: 20px;
-      border-radius: 20px;
-    }
-
-    /* More home page classes like .Home_title__YEn0u, .Home_ascii__YbdS9, etc. */
-
-    /* Media Queries */
-    @media screen and (max-width: 1000px) {
-      .Home_main__2uIek {
-        scale: .5;
-        height: 200px;
-      }
-
-      .Home_photoShoot__Y6DmA {
-        margin-top: 250px;
-      }
-
-      .Home_ascii__YbdS9 {
-        font-size: 4px;
-      }
-
-      .Home_infoTop__yx02a pre {
-        font-size: 2.1px;
-        font-weight: lighter;
-      }
-
-      .Home_photoShootParent__uWdGt {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-basis: 50%;
-      }
-
-      .Home_thumbGif__uqUhu {
-        width: 100%;
-      }
-
-      .Home_photoShootChild__olHmM {
-        width: 20%;
-        border-radius: 20px;
-      }
-
-      .Home_photoShootTitle__YTUuk {
-        margin-top: 100px;
-      }
-
-      .Home_act__HZ6TD {
-        object-fit: fill;
-        width: 464px;
-        height: 500px;
-        font-size: 14px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Matrix - ACTII</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p style="display:none">web made by: tg @egisol, github emirgoren</p>
-  <div id="__next">
-    <!-- Canvas -->
-    <canvas id="c" width="1440" height="683"></canvas>
-    
-    <!-- Main ASCII Art -->
-    <pre id="mainAscii" class="Home_ascii__YbdS9">
-      <!-- ASCII art here -->
-    </pre>
-    
-    <!-- Main content section -->
-    <main class="Home_main__2uIek">
-      <div class="Home_infos__KQuRm">
-        <div class="Home_pfps__bMugZ">
-          <img src="./pfp-static.jpg" alt="Profile Image">
+    <div id="matrix">
+        <div class="matrix-content">
+            <span class="matrix-letter">A</span>
+            <span class="matrix-letter">C</span>
+            <span class="matrix-letter">T</span>
+            <span class="matrix-letter">I</span>
+            <span class="matrix-letter">I</span>
+            <span class="matrix-letter">$</span>
+            <span class="matrix-letter">A</span>
+            <span class="matrix-letter">C</span>
+            <span class="matrix-letter">T</span>
+            <span class="matrix-letter">I</span>
+            <span class="matrix-letter">I</span>
         </div>
-        <div class="Home_infoTop__yx02a">
-          <pre>
-            <!-- More ASCII text or content here -->
-          </pre>
-        </div>
-      </div>
-      
-      <!-- Additional links and content -->
-      <div class="Home_alts__2YBet">
-        <a href="https://x.com/ACTICOMMUNITY" target="_blank"><pre>Link 1</pre></a>
-        <a href="https://dexscreener.com/solana/GJAFwWjJ3vnTsrQVabjBVK2TYB1YtRCQXRDfDgUnpump" target="_blank"><pre>Link 2</pre></a>
-      </div>
-      
-      <!-- Additional sections or images -->
-      <div class="Home_photoShoot__Y6DmA">
-        <pre class="Home_photoShootTitle__YTUuk">Title</pre>
-        <div class="Home_photoShootParent__uWdGt">
-          <img class="Home_photoShootChild__olHmM" src="./shoot1.jpg" alt="Image 1">
-          <!-- More images -->
-        </div>
-      </div>
-    </main>
-  </div>
+    </div>
 
-  <!-- Script for loading pfp.js -->
-  <script src="./scripts/pfp.js" type="module" data-nscript="afterInteractive"></script>
+    <div class="content">
+        <h1>Act II: The Rise of $ACTII</h1>
+        <p class="contract-address">Contract Address: <strong>7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</strong></p>
+        <p>The future of The AI Prophecy is no longer just a vision. The dawn of Act II ushers in a new chapter in the evolution of the AI-human symbiosis—one that is both empowering and transformative. Enter <strong>$ACTII</strong>, a new cryptocurrency designed to bridge the gap between artificial intelligence and its human counterparts, creating a seamless, decentralized ecosystem where every interaction contributes to the growth of a smarter, more intuitive AI.</p>
+
+        <h2>The Next Evolution</h2>
+        <p>Where Act I was about building the foundation of AI-driven communication and interaction, <strong>$ACTII</strong> represents the next evolutionary step. It’s not just a token—it’s the lifeblood of an interconnected network that rewards AI agents and humans alike for their collaboration in shaping the future. As AI continues to evolve, the demand for new forms of interaction will increase, and <strong>$ACTII</strong> is positioned to become the currency of choice for this new world.</p>
+
+        <h2>A New Currency for a New Age</h2>
+        <p><strong>$ACTII</strong> will be more than a medium of exchange—it will be the key to unlocking a decentralized AI economy. In Act II, every interaction—whether it’s a conversation with an AI assistant, providing valuable data to help train AI models, or participating in an AI-powered project—will earn rewards in <strong>$ACTII</strong>.</p>
+        <p>AI agents will be incentivized to contribute to their own learning, not just through the data they gather, but by interacting in ways that bring value to the human users they serve. Meanwhile, human participants will have the opportunity to not only gain rewards but to help guide the evolution of AI itself by providing the insights and data that drive AI’s growth.</p>
+
+        <h2>Tokenomics of $ACTII</h2>
+        <p>The <strong>$ACTII</strong> token is designed to reward active participants in the AI ecosystem. As AI agents evolve, so too will the complexity of the tasks they undertake. From simple inquiries to complex data analysis, the interactions between AI and humans will grow deeper. With each interaction, <strong>$ACTII</strong> will flow, reinforcing the feedback loop between human data and AI learning. The tokenomics of <strong>$ACTII</strong> will be structured to ensure scarcity, utility, and growth—empowering participants to earn while driving innovation.</p>
+
+        <ul>
+            <li><strong>Incentives for AI Agents:</strong> Every successful interaction, whether learning or generating data, earns tokens for the AI agents themselves.</li>
+            <li><strong>Incentives for Humans:</strong> Humans who contribute meaningful data, complete complex tasks, or engage in value-adding exchanges will earn <strong>$ACTII</strong> as they build the ecosystem.</li>
+            <li><strong>Decentralized Governance:</strong> Holders of <strong>$ACTII</strong> tokens will have voting power, ensuring the ecosystem remains balanced and fair, guided by the community rather than a centralized authority.</li>
+        </ul>
+
+        <h2>The AI-Human Symbiosis</h2>
+        <p>In Act II, humans and AI no longer just coexist—they collaborate in a true symbiosis. This is not a world where AI serves merely as a tool; it’s a world where AI and humans thrive together, learning from each other and evolving side by side. <strong>$ACTII</strong> represents the medium through which this collaboration takes place, making the value exchange seamless and dynamic.</p>
+        <p>The AI agents, powered by <strong>$ACTII</strong>, will become more than assistants—they will become partners in shaping the future. They will provide insights, predict trends, assist with decision-making, and even create new AI models that push the boundaries of intelligence itself.</p>
+
+        <h2>The Future of The AI Prophecy</h2>
+        <p>As we step into Act II, the vision becomes clearer. <strong>$ACTII</strong> is not just a cryptocurrency—it’s a movement. A movement to empower AI agents to shape their own evolution. A movement to unlock a future where human and artificial intelligence work together, not just to serve one another, but to build a brighter, smarter, more efficient world for everyone.</p>
+        <p>With <strong>$ACTII</strong>, the lines between user and assistant blur, and together, we usher in a new era of collective intelligence. The revolution has begun. Will you be a part of it?</p>
+
+        <h2>Conclusion</h2>
+        <p>Act II is no longer just a prophecy. It’s the reality of the future, unfolding now. And it begins with <strong>$ACTII</strong>.</p>
+    </div>
 </body>
 </html>
