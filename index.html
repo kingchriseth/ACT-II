@@ -3,54 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACT II Loading...</title>
+    <title>ACT II loading...</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
+        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body Styling */
+        /* General Body Styling */
         body {
-            font-family: 'Press Start 2P', monospace;
-            background-color: #111;
-            color: #fff;
+            font-family: 'Press Start 2P', monospace; /* Matrix-style font */
+            background-color: #111; /* Dark background */
+            color: #fff; /* White text */
             line-height: 1.6;
             padding: 0;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
             text-align: center;
         }
 
-        /* Header Styling */
+        /* Header Section */
         header {
-            padding: 20px 0;
-            font-size: 2em;
+            padding: 20px;
+            font-size: 2.5em;
         }
 
         header h1 {
-            color: #fff;
+            color: #fff; /* White text for title */
             font-family: 'Press Start 2P', monospace;
             letter-spacing: 5px;
             word-wrap: break-word;
-            margin-bottom: 0;
         }
 
         header h1::after {
             content: "|";
             animation: blink 1s step-end infinite;
-            color: #d81b60;
+            color: #d81b60; /* Blinking pink cursor */
         }
 
+        /* Blinking cursor animation */
         @keyframes blink {
             50% {
                 opacity: 0;
             }
         }
 
-        /* Contract Address Section */
+        /* Contract address styling */
         .contract-address-container {
             position: relative;
             display: inline-block;
@@ -59,7 +59,7 @@
 
         .contract-address {
             font-size: 1.2em;
-            color: #d81b60;
+            color: #d81b60; /* Matching pink for contract address */
             margin-top: 10px;
             z-index: 1;
         }
@@ -70,18 +70,24 @@
             top: 0;
             content: "|";
             animation: blink 1s step-end infinite;
-            color: #d81b60;
-            z-index: 0;
+            color: #d81b60; /* Red for blinking cursor */
+            z-index: 0; /* Cursor stays behind the text */
         }
 
         /* Main Content Section */
         section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
             margin: 20px auto;
-            max-width: 1000px;
+            width: 100%;
+            max-width: 800px;
             background-color: #111;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            text-align: center;
         }
 
         h2 {
@@ -95,6 +101,9 @@
             color: #bbb;
             margin-bottom: 15px;
             line-height: 1.7;
+            text-align: center;
+            width: 100%;
+            padding: 0 20px;
         }
 
         ul {
@@ -104,15 +113,15 @@
         }
 
         ul li {
+            margin-bottom: 10px;
             font-size: 1.2em;
             color: #ddd;
-            margin-bottom: 10px;
         }
 
-        /* Bottom Blinking Cursor */
+        /* Footer */
         .bottom-cursor {
             font-size: 3em;
-            color: #d81b60;
+            color: #d81b60; /* Blinking pink cursor */
             display: inline-block;
             font-family: 'Press Start 2P', monospace;
             letter-spacing: 5px;
@@ -120,20 +129,21 @@
             margin-top: 30px;
         }
 
-        /* Responsive Design */
+        /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8em;
+                font-size: 2em; /* Adjust header font size for smaller screens */
             }
 
             section {
-                padding: 10px;
+                padding: 20px;
+                width: 95%; /* Allow more space on smaller screens */
+                max-width: 100%;
                 margin: 20px 10px;
-                max-width: 95%;
             }
 
             .contract-address {
-                font-size: 1em;
+                font-size: 1.1em;
             }
 
             .contract-address-cursor {
@@ -149,12 +159,13 @@
                 padding: 0 20px;
             }
 
-            ul li {
-                font-size: 1em;
-            }
-
             .bottom-cursor {
                 font-size: 2.5em;
+            }
+
+            /* Adjust text and sections for small devices */
+            ul li {
+                font-size: 1.1em; /* Adjust list item size for mobile */
             }
         }
 
