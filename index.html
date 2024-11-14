@@ -8,6 +8,7 @@
         /* Set body and general styles */
         body, html {
             margin: 0;
+            padding: 0;
             height: 100%;
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: black;
@@ -25,29 +26,39 @@
             z-index: -1;
             pointer-events: none;
             background: transparent;
-            animation: matrix-falling 10s infinite linear;
+            animation: matrix-falling 0.5s linear infinite;
         }
 
         /* Create falling matrix effect */
         @keyframes matrix-falling {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
+            0% {
+                background: transparent;
+            }
+            100% {
+                background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAPCAYAAADvVrYyAAAAmElEQVRIDbXBAQEAAAABIP6PzgpVgggAAH0MQjJAAAAAElFTkSuQmCC") repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
         }
 
-        /* Styling for the content */
+        /* Content Styling */
         .content {
             position: relative;
             top: 10%;
             left: 50%;
             transform: translateX(-50%);
             width: 80%;
-            background: rgba(0, 0, 0, 0.6); /* Transparent background */
+            background: rgba(0, 0, 0, 0.7); /* Transparent background */
             padding: 20px;
             border-radius: 10px;
             z-index: 10;
             font-size: 18px;
             max-height: 80vh;
-            overflow-y: auto;
+            overflow-y: scroll;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         /* Styling for the headlines */
@@ -68,6 +79,15 @@
             color: #ffcc00;
             margin-top: 10px;
             margin-bottom: 20px;
+        }
+
+        /* Hide scrollbar but keep content scrollable */
+        .content::-webkit-scrollbar {
+            display: none; /* Hide scrollbar */
+        }
+        .content {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
         }
 
         /* List styling */
