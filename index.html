@@ -13,10 +13,10 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: black;
             color: white;
-            overflow: hidden;
+            overflow: hidden; /* Hide the default scrollbar for entire page */
         }
 
-        /* Matrix effect */
+        /* Create the matrix background with falling characters */
         #matrix {
             position: fixed;
             top: 0;
@@ -25,49 +25,79 @@
             height: 100%;
             z-index: -1;
             pointer-events: none;
-            background: transparent;
-            animation: matrix-falling 0.5s linear infinite;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            animation: matrix-falling 2s linear infinite;
         }
 
-        /* Create falling matrix effect */
+        /* Cascading matrix effect */
         @keyframes matrix-falling {
             0% {
-                background: transparent;
+                opacity: 0.1;
+                transform: translateY(-100%);
             }
             100% {
-                background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAPCAYAAADvVrYyAAAAmElEQVRIDbXBAQEAAAABIP6PzgpVgggAAH0MQjJAAAAAElFTkSuQmCC") repeat;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
+                opacity: 1;
+                transform: translateY(100%);
             }
         }
 
-        /* Content Styling */
+        /* Styling the falling letters (in pink/purple colors) */
+        .matrix-character {
+            color: #ff80bf; /* Light pink/purple color */
+            font-size: 20px;
+            animation: fall 0.5s linear infinite;
+        }
+
+        /* The matrix falling letters animation */
+        @keyframes fall {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Content area */
         .content {
             position: relative;
             top: 10%;
             left: 50%;
             transform: translateX(-50%);
             width: 80%;
-            background: rgba(0, 0, 0, 0.7); /* Transparent background */
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
             padding: 20px;
             border-radius: 10px;
             z-index: 10;
             font-size: 18px;
             max-height: 80vh;
-            overflow-y: scroll;
+            overflow-y: auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* Styling for the headlines */
-        h1, h2 {
+        /* Glowing Green Main Title */
+        h1 {
+            text-align: center;
+            color: #00ff00; /* Bright green color */
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+        }
+
+        /* Styling for the rest of the headings */
+        h2 {
             text-align: center;
             color: #ff80bf; /* Light pink color */
         }
 
-        /* Styling for $ACTII */
+        /* Highlighting $ACTII in a different color */
         .highlight {
             color: #ff6347; /* Light red for $ACTII */
         }
@@ -81,7 +111,7 @@
             margin-bottom: 20px;
         }
 
-        /* Hide scrollbar but keep content scrollable */
+        /* Hide the scrollbar but keep content scrollable */
         .content::-webkit-scrollbar {
             display: none; /* Hide scrollbar */
         }
@@ -134,5 +164,22 @@
         <p>Act II is no longer just a prophecy. It’s the reality of the future, unfolding now. And it begins with <span class="highlight">$ACTII</span>.</p>
     </div>
 
+    <script>
+        // Create matrix effect by adding random characters
+        const matrix = document.getElementById('matrix');
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('');
+
+        // Create the falling matrix characters
+        setInterval(function() {
+            const div = document.createElement('div');
+            const randomCharacter = characters[Math.floor(Math.random() * characters.length)];
+            div.className = 'matrix-character';
+            div.textContent = randomCharacter;
+            matrix.appendChild(div);
+            setTimeout(() => {
+                matrix.removeChild(div); // Remove the character after it falls
+            }, 2000); // Adjust this time to change the speed of character falling
+        }, 100); // Create a new character every 100ms
+    </script>
 </body>
 </html>
