@@ -1,164 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACT II - The AI Prophecy</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>$ACTII: The Evolution of AI and Community Empowerment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
-        /* Base reset */
-        * {
+        /* Background Matrix Effect */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        /* Full-screen Matrix Effect Background */
-        body, html {
+            height: 100vh;
             overflow: hidden;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: black;
-            color: #ffffff;
         }
 
-        /* Matrix animation */
         .matrix {
             position: absolute;
             top: 0;
             left: 0;
+            z-index: -1;
             width: 100%;
             height: 100%;
-            overflow: hidden;
-            z-index: -1;
-            background: black;
-        }
-
-        .matrix div {
-            position: absolute;
-            top: -100%;
-            width: 20px;
-            color: rgba(255, 0, 255, 0.7);
+            pointer-events: none;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgba(0, 255, 0, 0.75);
             font-size: 20px;
-            line-height: 1.2;
-            animation: fall linear infinite;
-            opacity: 0.8;
+            letter-spacing: 1px;
+            opacity: 0.5;
+            line-height: 1.5;
         }
 
-        /* Random speed and start time for matrix columns */
-        @keyframes fall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100vh); }
-        }
-
-        /* Main Content Styling */
-        .container {
-            text-align: center;
-            max-width: 90%;
-            z-index: 2;
-        }
-
-        h1 {
-            font-size: 4rem;
+        /* Header Title */
+        .header-title {
+            font-size: 80px;
             color: #00ff00;
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
-            animation: pulse 2s infinite;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            text-shadow: 0 0 10px #00ff00;
+            animation: pulse 1s infinite alternate;
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+            0% {
+                text-shadow: 0 0 10px #00ff00;
+            }
+
+            100% {
+                text-shadow: 0 0 20px #00ff00;
+            }
         }
 
-        /* Content Styling */
+        /* Main Content Area */
         .content {
-            font-size: 1.2rem;
-            color: #ffffff;
-            line-height: 1.6;
-            margin-top: 1rem;
+            margin-top: 100px;
+            padding: 20px;
+            text-align: center;
         }
 
-        .header {
-            color: #87CEEB;
+        .content h1 {
+            color: lightblue;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
-        .highlight {
-            color: #ff0000;
+        .content p {
+            font-size: 1.1em;
+            color: white;
+            line-height: 1.8;
+            margin: 20px 0;
         }
 
-        .contract {
-            font-size: 1.2rem;
-            margin: 2rem 0;
-            color: #00ff00;
-            font-weight: bold;
+        .content .contract-address {
+            font-size: 1.2em;
+            color: lightblue;
         }
 
-        .contract .label {
-            color: #87CEEB;
+        .content .contract-address span {
+            color: red;
         }
 
-        .contract .address {
-            color: #00ff00;
+        .content .contract-details {
+            font-size: 1.2em;
+            color: lightgreen;
         }
 
-        /* Responsive font adjustments */
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .content { font-size: 1rem; }
-            .contract { font-size: 1rem; }
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: lightgray;
         }
+
+        .footer a {
+            color: lightblue;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
+
 <body>
-    <!-- Background Matrix Animation -->
-    <div class="matrix">
-        <!-- JS-generated matrix rain here -->
+
+    <!-- Matrix Effect -->
+    <div class="matrix"></div>
+
+    <div class="content">
+        <h1 class="header-title">ACT II: The Next Step in AI and Community Empowerment</h1>
+
+        <div class="intro">
+            <p>
+                **$ACTII** is the evolution of the vision behind Act I, focused on continuing the momentum while embracing new challenges, opportunities, and possibilities. This project is more than just a token—**$ACTII** represents the spirit of decentralized collaboration, a collective effort to redefine how AI, technology, and communities come together to drive progress.
+            </p>
+        </div>
+
+        <div class="reflections">
+            <h1>Reflections on Act I</h1>
+            <p>
+                **$ACT** laid the groundwork for a new way of thinking about AI—an open, decentralized platform where knowledge was shared, and innovation thrived. The story of **$ACT** was one of resilience, but also of lessons learned. It wasn’t just about technology; it was about a community working together for a common goal.
+            </p>
+
+            <p>
+                **$ACTII** builds upon these lessons. With the community now at the center, **$ACTII** opens the door to new opportunities, fresh ideas, and even greater collaboration. The departure of centralized control has empowered the community, allowing **$ACTII** to move forward in ways that reflect its true potential.
+            </p>
+        </div>
+
+        <div class="mission">
+            <h1>$ACTII: A New Beginning</h1>
+            <p>
+                With the departure of centralized control, **$ACTII** represents a new beginning. The focus remains on empowering individuals to explore, understand, and engage with the world of AI and technology, while also building a stronger, more unified community. This isn’t just about a token—it’s about the future of decentralized AI collaboration.
+            </p>
+
+            <p>
+                **$ACTII** is committed to making AI more accessible to everyone. Through **$ACTII**, we break down the barriers to understanding and participating in AI, creating a space where anyone can learn and contribute.
+            </p>
+        </div>
+
+        <div class="contract-info">
+            <h1>Contract Address</h1>
+            <p class="contract-address">
+                Contract Address: <span>CA</span><br />
+                <span class="contract-details">7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</span>
+            </p>
+        </div>
+
+        <div class="vision">
+            <h1>The Future of $ACTII</h1>
+            <p>
+                **$ACTII** is a dynamic, evolving project—where the future isn’t set in stone, and the possibilities are endless. There are no rigid timelines, no assumptions about what comes next. Instead, **$ACTII** is guided by the needs, ideas, and contributions of its community members.
+            </p>
+
+            <p>
+                As **$ACTII** moves forward, it will remain open-ended, with the potential to expand into new areas, face new challenges, and explore new ideas. With **$ACTII**, the future of AI is in the hands of the people who care about it the most—**$ACTII** is driven by those who are most passionate about making an impact.
+            </p>
+        </div>
+
+        <div class="join">
+            <h1>Join the Journey with $ACTII</h1>
+            <p>
+                **$ACTII** is just beginning. But what happens next? That’s up to you. As a decentralized community project, **$ACTII** offers limitless potential for anyone who wants to be part of shaping the future of AI.
+            </p>
+
+            <p>
+                Whether you’re new to AI or an experienced innovator, **$ACTII** invites you to be part of something bigger than yourself. **$ACTII** is a collective effort to explore, learn, and push the boundaries of what’s possible.
+            </p>
+        </div>
+
     </div>
 
-    <!-- Main Content -->
-    <div class="container">
-        <h1>ACT II - The AI Prophecy</h1>
-
-        <div class="contract">
-            <span class="label">Contract Address:</span>
-            <span class="address">7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</span>
-        </div>
-
-        <div class="content">
-            <p class="header">Act I was a milestone in AI history.</p>
-            <p><span class="highlight">$ACTII</span> symbolizes resilience, unity, and growth, bridging AI and crypto communities with a decentralized mission.</p>
-            <p>The Role of <span class="highlight">AmplifiedAmp</span> and <span class="highlight">ACT I</span> started our journey toward a future of transparency and community ownership. Together, we transformed <span class="highlight">$ACTII</span> into a platform for true AI literacy and empowerment.</p>
-            <p>Today, our <span class="highlight">$ACTII</span> community drives research, shares knowledge, and collaborates globally, all in pursuit of accessible, ethical AI for everyone.</p>
-        </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 $ACTII. All rights reserved.</p>
     </div>
 
     <script>
-        /* Matrix Effect Script */
-        const matrix = document.querySelector('.matrix');
-        const columns = Math.floor(window.innerWidth / 20);
+        // Simple matrix effect for the background
+        const matrixEffect = document.querySelector('.matrix');
+        let rows = Math.floor(window.innerHeight / 20);
+        let cols = Math.floor(window.innerWidth / 20);
 
-        for (let i = 0; i < columns; i++) {
-            const column = document.createElement('div');
-            column.style.left = `${i * 20}px`;
-            column.style.animationDuration = `${Math.random() * 5 + 5}s`;
-            column.textContent = Array.from({ length: 20 }, () => String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96))).join('\n');
-            matrix.appendChild(column);
+        let matrixArray = [];
+        for (let i = 0; i < cols; i++) {
+            matrixArray[i] = Array(rows).fill(0);
         }
 
-        /* Adjust matrix columns on window resize */
-        window.addEventListener('resize', () => {
-            matrix.innerHTML = '';
-            const columns = Math.floor(window.innerWidth / 20);
-            for (let i = 0; i < columns; i++) {
-                const column = document.createElement('div');
-                column.style.left = `${i * 20}px`;
-                column.style.animationDuration = `${Math.random() * 5 + 5}s`;
-                column.textContent = Array.from({ length: 20 }, () => String.fromCharCode(0x30A0 + Math.floor(Math.random() * 96))).join('\n');
-                matrix.appendChild(column);
+        function generateMatrixEffect() {
+            let matrixHtml = '';
+            for (let x = 0; x < cols; x++) {
+                for (let y = 0; y < rows; y++) {
+                    const char = String.fromCharCode(Math.random() * 128);
+                    const opacity = matrixArray[x][y] > 0 ? (matrixArray[x][y] / 10) : 0;
+                    matrixHtml += `<span style="position:absolute; left:${x * 20}px; top:${y * 20}px; opacity:${opacity}; color: #00ff00;">${char}</span>`;
+                    matrixArray[x][y] = matrixArray[x][y] > 0 ? matrixArray[x][y] - 1 : Math.random() > 0.95 ? 10 : 0;
+                }
             }
-        });
+            matrixEffect.innerHTML = matrixHtml;
+        }
+
+        setInterval(generateMatrixEffect, 100);
     </script>
+
 </body>
+
 </html>
