@@ -42,7 +42,7 @@
         header h1::after {
             content: "|"; /* Create a blinking cursor effect */
             animation: blink 1s step-end infinite;
-            color: #d81b60; /* Subtle pink for cursor */
+            color: #d81b60; /* Blinking pink cursor */
         }
 
         /* Blinking cursor animation */
@@ -53,10 +53,26 @@
         }
 
         /* Contract address styling */
+        .contract-address-container {
+            position: relative;
+            display: inline-block;
+        }
+
         .contract-address {
             font-size: 1.2em;
-            color: red; /* Solid red for contract address */
+            color: red; /* Red for contract address */
             margin-top: 10px;
+            z-index: 1; /* Ensure text appears above the cursor */
+        }
+
+        .contract-address-cursor {
+            position: absolute;
+            right: 0;
+            top: 0;
+            content: "|";
+            animation: blink 1s step-end infinite;
+            color: red; /* Red for blinking cursor */
+            z-index: 0; /* Cursor stays behind the text */
         }
 
         /* Section styling */
@@ -122,16 +138,10 @@
             }
         }
 
-        /* Custom styles for Act II and $ACTII in light neon pink for body text */
-        .light-neon-pink-text {
-            color: #ff4d88; /* Slightly lighter pink */
-            text-shadow: 0 0 3px #ff4d88, 0 0 5px #ff4d88; /* Subtle glow effect */
-        }
-
         /* Add a blinking cursor at the bottom of the page */
         .bottom-cursor {
             font-size: 3em;
-            color: #d81b60; /* Subtle pink for cursor */
+            color: #d81b60; /* Blinking pink cursor */
             display: inline-block;
             font-family: 'Press Start 2P', monospace;
             letter-spacing: 5px;
@@ -146,43 +156,27 @@
 
     <!-- Header Section -->
     <header>
-        <h1><span class="light-neon-pink-text">Act II</span> loading...</h1>
-        <p class="contract-address">Contract Address: <strong>CA 7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</strong></p>
+        <h1>Act II loading...</h1>
     </header>
+
+    <!-- Contract Address Section -->
+    <section>
+        <div class="contract-address-container">
+            <p class="contract-address">Contract Address: <strong>CA 7fk8qMjxauUXxKChkW6ubEMdw9guGEUm1wU6ADJPpump</strong></p>
+            <span class="contract-address-cursor"></span>
+        </div>
+    </section>
 
     <!-- Introduction Section -->
     <section class="intro">
-        <h2><span class="light-neon-pink-text">Act II</span>: Welcome to the Future of AI and Crypto</h2>
-        <p><span class="light-neon-pink-text">$ACTII</span> represents the next milestone in the evolution of AI and cryptocurrency. The journey ahead is one of infinite potential, driven by the power of AI and decentralized innovation.</p>
+        <h2>Act II: Welcome to the Future of AI and Crypto</h2>
+        <p>Act II represents the next milestone in the evolution of AI and cryptocurrency. The journey ahead is one of infinite potential, driven by the power of AI and decentralized innovation.</p>
         <p>The future is unwritten, but it is clear: we are on the verge of something transformative. A convergence of minds, ideas, and technologies—pushing the boundaries of what is possible.</p>
     </section>
 
     <!-- AI Technology Section -->
     <section class="ai-tech">
-        <h2><span class="light-neon-pink-text">The Vision Behind $ACTII</span></h2>
-        <p>The world is changing. <span class="light-neon-pink-text">$ACTII</span> embodies the power of artificial intelligence, and the future of AI lies in its ability to collaborate, learn, and adapt alongside humanity. It represents a decentralized ecosystem that grows with each passing moment.</p>
+        <h2>The Vision Behind $ACTII</h2>
+        <p>The world is changing. $ACTII embodies the power of artificial intelligence, and the future of AI lies in its ability to collaborate, learn, and adapt alongside humanity. It represents a decentralized ecosystem that grows with each passing moment.</p>
         <ul>
-            <li>Shaping the future through intelligent systems</li>
-            <li>Empowering individuals and communities to understand AI</li>
-            <li>Decentralized technology that puts control back in the hands of the people</li>
-            <li>A new era of limitless possibilities</li>
-        </ul>
-    </section>
-
-    <!-- Crypto Solutions Section -->
-    <section class="crypto-solutions">
-        <h2><span class="light-neon-pink-text">$ACTII</span>: Decentralized, Yet Unified</h2>
-        <p>The future of <span class="light-neon-pink-text">$ACTII</span> is decentralized, allowing for the collective ownership and governance of a global AI ecosystem. Together, we are building a space where AI knowledge is accessible to all, and the power to shape the future is in the hands of the many.</p>
-        <ul>
-            <li><strong>AI-Powered Decision Making:</strong> Leverage the power of AI for better, more efficient decision-making.</li>
-            <li><strong>Empowering Communities:</strong> A decentralized approach to ensure that no one is left behind.</li>
-            <li><strong>AI Literacy for All:</strong> Promoting understanding and engagement with AI across the globe.</li>
-            <li><strong>Innovating for the Future:</strong> Building a foundation for sustainable, ethical AI development.</li>
-        </ul>
-    </section>
-
-    <!-- Bottom Blinking Cursor -->
-    <div class="bottom-cursor">|</div>
-
-</body>
-</html>
+            <li>Shaping the futur
