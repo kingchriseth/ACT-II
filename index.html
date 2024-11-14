@@ -19,7 +19,7 @@
             background-color: #111; /* Dark background */
             color: #fff; /* White text */
             line-height: 1.6;
-            padding: 20px;
+            padding: 0;
             overflow-x: hidden; /* Prevent horizontal scrolling */
             text-align: left; /* Left align all text */
         }
@@ -28,13 +28,14 @@
         header {
             padding: 20px 0;
             text-align: center;
-            font-size: 2.5em; /* Adjusted font size */
+            font-size: 2.5em; /* Default font size */
         }
 
         header h1 {
             color: #fff; /* White text for title */
             font-family: 'Press Start 2P', monospace;
             letter-spacing: 5px;
+            word-wrap: break-word;
         }
 
         header h1::after {
@@ -55,7 +56,7 @@
             position: relative;
             display: inline-block;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         .contract-address {
@@ -77,15 +78,16 @@
 
         /* Section Styling */
         section {
-            padding: 40px 20px;
+            padding: 20px 20px;
             width: 100%;
-            max-width: 800px; /* Limit section width to 800px to prevent text from being too wide */
+            max-width: 90%; /* Ensures responsive width */
             margin: 0 auto;
             background-color: #111;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
             margin-bottom: 40px;
-            text-align: center; /* Ensure text is centered */
+            text-align: center;
+            max-width: 1000px; /* Keep max width */
         }
 
         h2 {
@@ -99,8 +101,8 @@
             margin-top: 10px;
             color: #bbb;
             line-height: 1.7;
-            text-align: center; /* Center text */
-            max-width: 90%; /* Ensure the text width is not too long */
+            text-align: center;
+            max-width: 90%;
             margin-left: auto;
             margin-right: auto;
         }
@@ -130,44 +132,40 @@
 
         /* Media Queries for responsiveness */
         @media (max-width: 768px) {
+            /* Header font size adjustment for mobile */
             header h1 {
-                font-size: 1.8em; /* Adjust header font size for smaller screens */
+                font-size: 1.8em;
             }
 
+            /* Section adjustments for mobile */
             section {
-                padding: 20px;
-                max-width: 95%; /* Allow more space on small screens */
+                padding: 10px 15px; /* Adjust padding for mobile */
+                max-width: 100%;
             }
 
+            /* Ensure the contract address is also responsive */
             .contract-address {
-                font-size: 1.1em;
+                font-size: 1em;
             }
 
             .contract-address-cursor {
                 font-size: 1em;
             }
 
+            /* Adjust heading sizes for mobile */
             h2 {
-                font-size: 1.6em; /* Adjust subheading size for mobile */
+                font-size: 1.5em;
             }
 
+            /* Adjust paragraph size for mobile */
             p {
-                font-size: 1em; /* Adjust text size for mobile */
-                padding-left: 20px;
-                padding-right: 20px;
+                font-size: 1em;
+                padding: 0 20px; /* Add padding to prevent text from touching edges */
             }
 
-            ul li {
-                font-size: 1em; /* Adjust list item size for mobile */
-            }
-
+            /* Adjust bottom cursor size */
             .bottom-cursor {
-                font-size: 2.5em; /* Adjust bottom cursor size for mobile */
-            }
-
-            /* Adjust text alignment for mobile */
-            p {
-                text-align: left;
+                font-size: 2em;
             }
         }
 
